@@ -2,7 +2,6 @@
 import { primaryNav, siteMeta } from "../data/site";
 import { englishPrimaryNav, englishSiteMeta } from "../data/site-en";
 import { withBase, withBasePath } from "../lib/urls";
-// 1. 画像のインポート
 import logoImg from "../assets/shinolab_logo.svg";
 
 interface Props {
@@ -37,7 +36,9 @@ const normalizePath = (path: string) => {
 const getDefaultLanguageSwitchHref = () => {
 	const normalizedCurrentPath = normalizePath(currentPath);
 	if (locale === "ja") {
-		return "/en" + (normalizedCurrentPath === "/" ? "" : normalizedCurrentPath);
+		return (
+			"/en" + (normalizedCurrentPath === "/" ? "" : normalizedCurrentPath)
+		);
 	}
 	return normalizedCurrentPath.replace(/^\/en/, "") || "/";
 };
@@ -78,15 +79,20 @@ const isActive = (href: string) => {
 <header class="site-header">
 	<div class="container site-header__inner">
 		<a class="site-brand" href={homeHref}>
-			<img 
-				src={logoImg.src} 
-				alt="Shinoda & Makino Lab Logo" 
-				class="custom-mobile-logo-img" 
+			<img
+				src={logoImg.src}
+				alt="Shinoda & Makino Lab Logo"
+				class="custom-mobile-logo-img"
 			/>
 			<span class="site-brand__name">{meta.englishName}</span>
 		</a>
 
-		<button type="button" class="custom-mobile-menu-btn" id="menu-trigger" aria-label="Menu">
+		<button
+			type="button"
+			class="custom-mobile-menu-btn"
+			id="menu-trigger"
+			aria-label="Menu"
+		>
 			<span></span>
 		</button>
 
@@ -109,18 +115,18 @@ const isActive = (href: string) => {
 </header>
 
 <script is:inline>
-  (function() {
-    function setupMenu() {
-      const trigger = document.getElementById('menu-trigger');
-      const header = document.querySelector('.site-header');
-      if (trigger && header) {
-        trigger.onclick = null;
-        trigger.onclick = () => {
-          header.classList.toggle('site-header--menu-open');
-        };
-      }
-    }
-    setupMenu();
-    document.addEventListener('astro:page-load', setupMenu);
-  })();
+	(function () {
+		function setupMenu() {
+			const trigger = document.getElementById("menu-trigger");
+			const header = document.querySelector(".site-header");
+			if (trigger && header) {
+				trigger.onclick = null;
+				trigger.onclick = () => {
+					header.classList.toggle("site-header--menu-open");
+				};
+			}
+		}
+		setupMenu();
+		document.addEventListener("astro:page-load", setupMenu);
+	})();
 </script>

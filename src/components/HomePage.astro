@@ -48,9 +48,8 @@ const visibleNewsItems = newsItemsRaw
 		if (!frontmatter.expireDate) return true;
 		return frontmatter.expireDate >= today;
 	})
-	.sort(
-		(a, b) =>
-			(b.frontmatter.date || "").localeCompare(a.frontmatter.date || ""),
+	.sort((a, b) =>
+		(b.frontmatter.date || "").localeCompare(a.frontmatter.date || ""),
 	)
 	.slice(0, 5);
 
@@ -142,54 +141,73 @@ const copy = isEnglish
 					class="home-topic-carousel__viewport"
 					data-carousel-viewport
 				>
-
 					<div class="home-topic-carousel__track" data-carousel-track>
-						{/* 1回目：既存のリスト */}
-						{
-							topicCarouselEntries.map(({ item, imageSrc }) => (
-								<article class="home-topic-carousel__item">
-									<a
-										class="home-topic-carousel__link"
-										href={withBasePath(isEnglish ? item.detailPathEn || item.detailPath : item.detailPath)}
+						{topicCarouselEntries.map(({ item, imageSrc }) => (
+							<article class="home-topic-carousel__item">
+								<a
+									class="home-topic-carousel__link"
+									href={withBasePath(
+										isEnglish
+											? item.detailPathEn ||
+													item.detailPath
+											: item.detailPath,
+									)}
+									draggable="false"
+								>
+									<img
+										src={imageSrc}
+										alt={
+											item.imageAlt ??
+											(isEnglish
+												? item.titleEn || item.title
+												: item.title)
+										}
+										class="home-topic-carousel__image"
 										draggable="false"
-									>
-										<img
-											src={imageSrc}
-											alt={item.imageAlt ?? (isEnglish ? item.titleEn || item.title : item.title)}
-											class="home-topic-carousel__image"
-											draggable="false"
-										/>
+									/>
 									<h3 class="home-topic-carousel__title">
-										{isEnglish ? item.titleEn || item.title : item.title}
+										{isEnglish
+											? item.titleEn || item.title
+											: item.title}
 									</h3>
-									</a>
-								</article>
-							))
-						}
-						{/* 2回目：無限ループ用に追加 */}
-						{
-							topicCarouselEntries.map(({ item, imageSrc }) => (
-								<article class="home-topic-carousel__item" aria-hidden="true">
-									<a
-										class="home-topic-carousel__link"
-										href={withBasePath(isEnglish ? item.detailPathEn || item.detailPath : item.detailPath)}
+								</a>
+							</article>
+						))}
+						{topicCarouselEntries.map(({ item, imageSrc }) => (
+							<article
+								class="home-topic-carousel__item"
+								aria-hidden="true"
+							>
+								<a
+									class="home-topic-carousel__link"
+									href={withBasePath(
+										isEnglish
+											? item.detailPathEn ||
+													item.detailPath
+											: item.detailPath,
+									)}
+									draggable="false"
+								>
+									<img
+										src={imageSrc}
+										alt={
+											item.imageAlt ??
+											(isEnglish
+												? item.titleEn || item.title
+												: item.title)
+										}
+										class="home-topic-carousel__image"
 										draggable="false"
-									>
-										<img
-											src={imageSrc}
-											alt={item.imageAlt ?? (isEnglish ? item.titleEn || item.title : item.title)}
-											class="home-topic-carousel__image"
-											draggable="false"
-										/>
+									/>
 									<h3 class="home-topic-carousel__title">
-										{isEnglish ? item.titleEn || item.title : item.title}
+										{isEnglish
+											? item.titleEn || item.title
+											: item.title}
 									</h3>
-									</a>
-								</article>
-							))
-						}
+								</a>
+							</article>
+						))}
 					</div>
-
 				</div>
 
 				<div class="home-topic-carousel__controls">
@@ -296,7 +314,6 @@ const copy = isEnglish
 		)
 	}
 
-
 	<section class="container content-section home-section home-latest">
 		<div class="section-heading section-heading--legacy">
 			<h2>{copy.latestHeading}</h2>
@@ -308,13 +325,11 @@ const copy = isEnglish
 					<article class="news-card">
 						<a
 							class="news-card__link"
-							href={
-								withBasePath(
-									isEnglish
-										? topic.detailPathEn
-										: topic.detailPath,
-								)
-							}
+							href={withBasePath(
+								isEnglish
+									? topic.detailPathEn
+									: topic.detailPath,
+							)}
 						>
 							<div
 								class:list={[
@@ -322,20 +337,18 @@ const copy = isEnglish
 									`visual-theme-${((index + 1) % 5) + 1}`,
 								]}
 							>
-								{
-									topic.image && (
-										<img
-											src={topic.image}
-											alt={
-												topic.imageAlt ??
-												(isEnglish
-													? topic.titleEn || topic.title
-													: topic.title)
-											}
-											class="news-card__image"
-										/>
-									)
-								}
+								{topic.image && (
+									<img
+										src={topic.image}
+										alt={
+											topic.imageAlt ??
+											(isEnglish
+												? topic.titleEn || topic.title
+												: topic.title)
+										}
+										class="news-card__image"
+									/>
+								)}
 							</div>
 							<h3>
 								{isEnglish
@@ -351,5 +364,4 @@ const copy = isEnglish
 			}
 		</div>
 	</section>
-
 </Layout>
