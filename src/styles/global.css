@@ -1154,6 +1154,10 @@ a {
 	line-height: 1.4 !important;
 }
 
+.custom-mobile-menu-btn {
+	display: none !important;
+}
+
 .home-project-card__body p {
 	font-size: 0.85rem !important;
 	color: var(--text-subtle) !important;
