@@ -1050,6 +1050,10 @@ a {
 	transition: all 0.3s ease;
 }
 
+.home-topic-carousel-section {
+	margin-top: 1rem;
+	position: relative;
+}
 
 .home-topic-carousel__viewport {
 	overflow: hidden !important;

@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import logo from "../assets/shinolab_logo.svg?url";
 import { siteMeta } from "../data/site";
 import { englishSiteMeta } from "../data/site-en";
 import { resolveAssetPath } from "../lib/public-assets";
@@ -10,8 +9,6 @@ import {
 	getResearchTopics,
 } from "../lib/research-topics";
 import type { ResearchTopicListItem } from "../lib/research-topics";
-import { publications } from "../lib/site-data";
-import type { Publication } from "../lib/site-data";
 
 interface Props {
 	locale?: "ja" | "en";
@@ -132,7 +129,7 @@ const copy = isEnglish
 	{
 		visibleTopicCarouselItems.length > 0 && (
 			<section
-				class="container home-topic-carousel"
+				class="container home-topic-carousel home-topic-carousel-section"
 				data-topic-carousel
 				role="region"
 				aria-label={copy.carouselLabel}
