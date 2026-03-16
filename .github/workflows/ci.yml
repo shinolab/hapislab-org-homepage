@@ -13,7 +13,5 @@ jobs:
     name: Build Check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and check your site
-        uses: withastro/action@v3
+      - uses: actions/checkout@v5
+      - uses: withastro/action@v5
