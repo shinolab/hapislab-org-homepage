@@ -30,14 +30,22 @@ const meta = isEnglish ? englishSiteMeta : siteMeta;
 const currentPath = isEnglish ? "/en/" : "/";
 const latestTopics = getResearchTopics().slice(0, 3);
 
-const newsModules = import.meta.glob("../content/news/*.md", {
+const newsModules = import.meta.glob("../content/top/news/*.md", {
 	eager: true,
 });
 
-const newsItemsRaw = Object.values(newsModules).map((mod: any) => ({
-	Content: mod.Content,
-	frontmatter: mod.frontmatter,
-}));
+function isEnglishNewsModule(path: string): boolean {
+	return path.endsWith(".en.md");
+}
+
+const newsItemsRaw = Object.entries(newsModules)
+	.filter(([path]) =>
+		isEnglish ? isEnglishNewsModule(path) : !isEnglishNewsModule(path),
+	)
+	.map(([, mod]: [string, any]) => ({
+		Content: mod.Content,
+		frontmatter: mod.frontmatter,
+	}));
 
 const today = new Date().toISOString().split("T")[0];
 
@@ -56,8 +64,8 @@ const homeContentModules = import.meta.glob("../content/home/*.json", {
 });
 
 const projectsPath = isEnglish
-	? "../content/home/projects.en.json"
-	: "../content/home/projects.json";
+	? "../content/top/projects.en.json"
+	: "../content/top/projects.json";
 const projectsLoader = homeContentModules[projectsPath];
 const projectItems = projectsLoader
 	? (((await projectsLoader()) as HomeProject[]) ?? [])
@@ -148,40 +156,44 @@ const copy = isEnglish
 					</button>
 
 					<div class="home-topic-carousel__track" data-carousel-track>
-						{topicCarouselEntries.map(({ item, imageSrc }, index) => (
-							<article class="home-topic-carousel__item">
-								<a
-									class="home-topic-carousel__link"
-									href={withBasePath(
-										isEnglish
-											? item.detailPathEn ||
-													item.detailPath
-											: item.detailPath,
-									)}
-									draggable="false"
-								>
-									<Image
-										src={imageSrc}
-										alt={
-											item.imageAlt ??
-											(isEnglish
-												? item.titleEn || item.title
-												: item.title)
-										}
-										class="home-topic-carousel__image"
+						{topicCarouselEntries.map(
+							({ item, imageSrc }, index) => (
+								<article class="home-topic-carousel__item">
+									<a
+										class="home-topic-carousel__link"
+										href={withBasePath(
+											isEnglish
+												? item.detailPathEn ||
+														item.detailPath
+												: item.detailPath,
+										)}
 										draggable="false"
-										width={200}
-										height={150}
-										loading={index < 3 ? "eager" : "lazy"}
-									/>
-									<h3 class="home-topic-carousel__title">
-										{isEnglish
-											? item.titleEn || item.title
-											: item.title}
-									</h3>
-								</a>
-							</article>
-						))}
+									>
+										<Image
+											src={imageSrc}
+											alt={
+												item.imageAlt ??
+												(isEnglish
+													? item.titleEn || item.title
+													: item.title)
+											}
+											class="home-topic-carousel__image"
+											draggable="false"
+											width={200}
+											height={150}
+											loading={
+												index < 3 ? "eager" : "lazy"
+											}
+										/>
+										<h3 class="home-topic-carousel__title">
+											{isEnglish
+												? item.titleEn || item.title
+												: item.title}
+										</h3>
+									</a>
+								</article>
+							),
+						)}
 						{topicCarouselEntries.map(({ item, imageSrc }) => (
 							<article
 								class="home-topic-carousel__item"
@@ -254,12 +266,18 @@ const copy = isEnglish
 				</div>
 
 				<div>
-					<div class="section-heading home-affiliations-block__heading">
+					<div
+						class="section-heading home-affiliations-block__heading"
+					>
 						<h4>{copy.affiliationsHeading}</h4>
 					</div>
 
 					<ul class="legacy-bullet-list">
-						{meta.affiliations.map((affiliation) => <li>{affiliation}</li>)}
+						{
+							meta.affiliations.map((affiliation) => (
+								<li>{affiliation}</li>
+							))
+						}
 					</ul>
 				</div>
 			</div>
@@ -283,11 +301,15 @@ const copy = isEnglish
 										{imageSrc && (
 											<Image
 												src={imageSrc}
-												alt={project.imageAlt ?? project.title}
+												alt={
+													project.imageAlt ??
+													project.title
+												}
 												class="home-project-card__image"
 												width={400}
 												height={225}
-											/>										)}
+											/>
+										)}
 										{!imageSrc && (
 											<div
 												class="home-project-card__image home-project-card__image--placeholder"
@@ -318,20 +340,27 @@ const copy = isEnglish
 
 					<div class="home-section__content">
 						<div class="home-news-list">
-							{visibleNewsItems.map(({ Content, frontmatter }) => (
-								<article class="surface home-news-card">
-									<div class="home-news-card__date">
-										{frontmatter.date && (
-											<time datetime={frontmatter.date}>
-												{frontmatter.date.replace(/-/g, "/")}
-											</time>
-										)}
-									</div>
-									<div class="home-news-card__content">
-										<Content />
-									</div>
-								</article>
-							))}
+							{visibleNewsItems.map(
+								({ Content, frontmatter }) => (
+									<article class="surface home-news-card">
+										<div class="home-news-card__date">
+											{frontmatter.date && (
+												<time
+													datetime={frontmatter.date}
+												>
+													{frontmatter.date.replace(
+														/-/g,
+														"/",
+													)}
+												</time>
+											)}
+										</div>
+										<div class="home-news-card__content">
+											<Content />
+										</div>
+									</article>
+								),
+							)}
 						</div>
 					</div>
 				</section>
@@ -368,7 +397,8 @@ const copy = isEnglish
 												alt={
 													topic.imageAlt ??
 													(isEnglish
-														? topic.titleEn || topic.title
+														? topic.titleEn ||
+															topic.title
 														: topic.title)
 												}
 												class="news-card__image"
@@ -412,7 +442,9 @@ const copy = isEnglish
 		cursor: pointer;
 		z-index: 10;
 		opacity: 0;
-		transition: opacity 0.3s ease, background 0.3s ease;
+		transition:
+			opacity 0.3s ease,
+			background 0.3s ease;
 		padding-bottom: 0.3rem;
 		user-select: none;
 	}
@@ -446,22 +478,26 @@ const copy = isEnglish
 
 <script>
 	function setupCarousel() {
-		const track = document.querySelector('[data-carousel-track]') as HTMLElement;
-		const viewport = document.querySelector('[data-carousel-viewport]') as HTMLElement;
-		const prevBtn = document.getElementById('carousel-prev');
-		const nextBtn = document.getElementById('carousel-next');
+		const track = document.querySelector(
+			"[data-carousel-track]",
+		) as HTMLElement;
+		const viewport = document.querySelector(
+			"[data-carousel-viewport]",
+		) as HTMLElement;
+		const prevBtn = document.getElementById("carousel-prev");
+		const nextBtn = document.getElementById("carousel-next");
 
 		if (!track || !viewport || !prevBtn || !nextBtn) return;
 
 		let currentX = 0;
 		let lastTimestamp = 0;
 		let animationId: number | null = null;
-		
+
 		// States
 		let isManual = false;
 		let manualDirection = 0; // -1: left, 1: right
 		let isLongPress = false;
-		
+
 		const AUTO_SPEED = 0.04; // px per ms (auto scroll)
 		const MANUAL_SPEED = 0.8; // px per ms (long press scroll)
 		const ITEM_WIDTH = 200 + 20; // width + gap
@@ -488,20 +524,24 @@ const copy = isEnglish
 			if (currentX < -HALF_WIDTH) currentX += HALF_WIDTH;
 
 			// Use setProperty for performance and to ensure we override other styles
-			track.style.setProperty('transform', `translateX(${currentX}px)`, 'important');
-			
+			track.style.setProperty(
+				"transform",
+				`translateX(${currentX}px)`,
+				"important",
+			);
+
 			animationId = requestAnimationFrame(update);
 		};
 
 		const moveByItem = (direction: number) => {
 			isManual = true;
-			track.classList.add('is-jumping');
-			
+			track.classList.add("is-jumping");
+
 			currentX += direction * ITEM_WIDTH;
-			
+
 			// Brief delay to allow transition, then resume auto-scroll
 			setTimeout(() => {
-				track.classList.remove('is-jumping');
+				track.classList.remove("is-jumping");
 				isManual = false;
 			}, 400);
 		};
@@ -513,7 +553,7 @@ const copy = isEnglish
 			isManual = true;
 			isLongPress = false;
 			manualDirection = direction;
-			
+
 			pressTimer = window.setTimeout(() => {
 				isLongPress = true;
 			}, 250);
@@ -521,7 +561,7 @@ const copy = isEnglish
 
 		const onEnd = (direction: number) => {
 			if (pressTimer) clearTimeout(pressTimer);
-			
+
 			if (!isLongPress) {
 				moveByItem(direction);
 			} else {
@@ -532,14 +572,16 @@ const copy = isEnglish
 		};
 
 		// Mouse
-		prevBtn.addEventListener('mousedown', () => onStart(1));
-		nextBtn.addEventListener('mousedown', () => onStart(-1));
+		prevBtn.addEventListener("mousedown", () => onStart(1));
+		nextBtn.addEventListener("mousedown", () => onStart(-1));
 
 		const onGlobalMouseUp = (e: MouseEvent) => {
 			if (isManual) {
-				const isPrev = e.target === prevBtn || prevBtn.contains(e.target as Node);
-				const isNext = e.target === nextBtn || nextBtn.contains(e.target as Node);
-				
+				const isPrev =
+					e.target === prevBtn || prevBtn.contains(e.target as Node);
+				const isNext =
+					e.target === nextBtn || nextBtn.contains(e.target as Node);
+
 				if (isPrev) onEnd(1);
 				else if (isNext) onEnd(-1);
 				else {
@@ -550,26 +592,38 @@ const copy = isEnglish
 			}
 		};
 
-		window.addEventListener('mouseup', onGlobalMouseUp);
-		
+		window.addEventListener("mouseup", onGlobalMouseUp);
+
 		// Stop scroll on hover
-		viewport.addEventListener('mouseenter', () => {
+		viewport.addEventListener("mouseenter", () => {
 			if (!isManual) {
-				// We can either pause or just keep it moving. 
+				// We can either pause or just keep it moving.
 				// The prompt says "hover pauses", let's keep that logic.
 				// For simplicity here, let's keep it moving unless clicking.
 			}
 		});
 
 		// Touch
-		prevBtn.addEventListener('touchstart', (e) => { e.preventDefault(); onStart(1); });
-		prevBtn.addEventListener('touchend', (e) => { e.preventDefault(); onEnd(1); });
-		nextBtn.addEventListener('touchstart', (e) => { e.preventDefault(); onStart(-1); });
-		nextBtn.addEventListener('touchend', (e) => { e.preventDefault(); onEnd(-1); });
+		prevBtn.addEventListener("touchstart", (e) => {
+			e.preventDefault();
+			onStart(1);
+		});
+		prevBtn.addEventListener("touchend", (e) => {
+			e.preventDefault();
+			onEnd(1);
+		});
+		nextBtn.addEventListener("touchstart", (e) => {
+			e.preventDefault();
+			onStart(-1);
+		});
+		nextBtn.addEventListener("touchend", (e) => {
+			e.preventDefault();
+			onEnd(-1);
+		});
 
 		animationId = requestAnimationFrame(update);
 	}
 
 	setupCarousel();
-	document.addEventListener('astro:page-load', setupCarousel);
+	document.addEventListener("astro:page-load", setupCarousel);
 </script>
