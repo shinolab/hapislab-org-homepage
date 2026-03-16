@@ -129,7 +129,7 @@ const copy = isEnglish
 	{
 		visibleTopicCarouselItems.length > 0 && (
 			<section
-				class="container home-topic-carousel home-topic-carousel-section"
+				class="home-page-container home-topic-carousel home-topic-carousel-section"
 				data-topic-carousel
 				role="region"
 				aria-label={copy.carouselLabel}
@@ -214,151 +214,161 @@ const copy = isEnglish
 		)
 	}
 
-	<section class="container content-section home-section">
-		<div class="section-heading section-heading--legacy">
-			<h2>{copy.overviewHeading}</h2>
-		</div>
-
-		<div class="home-intro">
-			<div class="home-intro__branding">
-				<div class="home-overview__body">
-					<h4>{copy.affiliation}</h4>
-					<h3>{copy.title}</h3>
-				</div>
+	<div class="home-page-container">
+		<section class="content-section home-section">
+			<div class="section-heading section-heading--legacy page-hero">
+				<h1>{copy.overviewHeading}</h1>
 			</div>
 
-			<div class="home-overview__description">
-				<p>{copy.description}</p>
-			</div>
-		</div>
+			<div class="home-section__content">
+				<div class="home-intro">
+					<div class="home-intro__branding">
+						<div class="home-overview__body">
+							<h4>{copy.affiliation}</h4>
+							<h3>{copy.title}</h3>
+						</div>
+					</div>
 
-		<div>
-			<div class="section-heading home-affiliations-block__heading">
-				<h4>{copy.affiliationsHeading}</h4>
-			</div>
-
-			<ul class="legacy-bullet-list">
-				{meta.affiliations.map((affiliation) => <li>{affiliation}</li>)}
-			</ul>
-		</div>
-	</section>
-
-	{
-		visibleProjectItems.length > 0 && (
-			<section class="container content-section home-section">
-				<div class="section-heading section-heading--legacy">
-					<h2>{copy.projectsHeading}</h2>
+					<div class="home-overview__description">
+						<p>{copy.description}</p>
+					</div>
 				</div>
 
-				<div class="home-projects-list">
-					{projectEntries.map(({ project, imageSrc }) => (
-						<article class="surface home-project-card">
-							<a
-								class="home-project-card__link"
-								href={withBase(project.href)}
-							>
-								{imageSrc && (
-									<img
-										src={imageSrc}
-										alt={project.imageAlt ?? project.title}
-										class="home-project-card__image"
-									/>
-								)}
-								{!imageSrc && (
-									<div
-										class="home-project-card__image home-project-card__image--placeholder"
-										aria-hidden="true"
-									/>
-								)}
-								<div class="home-project-card__body">
-									<h3>{project.title}</h3>
-									{project.description && (
-										<p>{project.description}</p>
+				<div>
+					<div class="section-heading home-affiliations-block__heading">
+						<h4>{copy.affiliationsHeading}</h4>
+					</div>
+
+					<ul class="legacy-bullet-list">
+						{meta.affiliations.map((affiliation) => <li>{affiliation}</li>)}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		{
+			visibleProjectItems.length > 0 && (
+				<section class="content-section home-section">
+					<div class="section-heading section-heading--legacy page-hero">
+						<h1>{copy.projectsHeading}</h1>
+					</div>
+
+					<div class="home-section__content">
+						<div class="home-projects-list">
+							{projectEntries.map(({ project, imageSrc }) => (
+								<article class="surface home-project-card">
+									<a
+										class="home-project-card__link"
+										href={withBase(project.href)}
+									>
+										{imageSrc && (
+											<img
+												src={imageSrc}
+												alt={project.imageAlt ?? project.title}
+												class="home-project-card__image"
+											/>
+										)}
+										{!imageSrc && (
+											<div
+												class="home-project-card__image home-project-card__image--placeholder"
+												aria-hidden="true"
+											/>
+										)}
+										<div class="home-project-card__body">
+											<h3>{project.title}</h3>
+											{project.description && (
+												<p>{project.description}</p>
+											)}
+										</div>
+									</a>
+								</article>
+							))}
+						</div>
+					</div>
+				</section>
+			)
+		}
+
+		{
+			visibleNewsItems.length > 0 && (
+				<section class="content-section home-section">
+					<div class="section-heading section-heading--legacy page-hero">
+						<h1>{copy.newsHeading}</h1>
+					</div>
+
+					<div class="home-section__content">
+						<div class="home-news-list">
+							{visibleNewsItems.map(({ Content, frontmatter }) => (
+								<article class="surface home-news-card">
+									<div class="home-news-card__date">
+										{frontmatter.date && (
+											<time datetime={frontmatter.date}>
+												{frontmatter.date.replace(/-/g, "/")}
+											</time>
+										)}
+									</div>
+									<div class="home-news-card__content">
+										<Content />
+									</div>
+								</article>
+							))}
+						</div>
+					</div>
+				</section>
+			)
+		}
+
+		<section class="content-section home-section home-latest">
+			<div class="section-heading section-heading--legacy page-hero">
+				<h1>{copy.latestHeading}</h1>
+			</div>
+
+			<div class="home-section__content">
+				<div class="home-news__grid">
+					{
+						latestTopics.map((topic, index) => (
+							<article class="news-card">
+								<a
+									class="news-card__link"
+									href={withBasePath(
+										isEnglish
+											? topic.detailPathEn
+											: topic.detailPath,
 									)}
-								</div>
-							</a>
-						</article>
-					))}
+								>
+									<div
+										class:list={[
+											"news-card__visual",
+											`visual-theme-${((index + 1) % 5) + 1}`,
+										]}
+									>
+										{topic.image && (
+											<img
+												src={topic.image}
+												alt={
+													topic.imageAlt ??
+													(isEnglish
+														? topic.titleEn || topic.title
+														: topic.title)
+												}
+												class="news-card__image"
+											/>
+										)}
+									</div>
+									<h3>
+										{isEnglish
+											? topic.titleEn || topic.title
+											: topic.title}
+									</h3>
+									<p class="news-card__date">
+										◷ {copy.articleMeta(topic)}
+									</p>
+								</a>
+							</article>
+						))
+					}
 				</div>
-			</section>
-		)
-	}
-
-	{
-		visibleNewsItems.length > 0 && (
-			<section class="container content-section home-section">
-				<div class="section-heading section-heading--legacy">
-					<h2>{copy.newsHeading}</h2>
-				</div>
-
-				<div class="home-news-list">
-					{visibleNewsItems.map(({ Content, frontmatter }) => (
-						<article class="surface home-news-card">
-							<div class="home-news-card__date">
-								{frontmatter.date && (
-									<time datetime={frontmatter.date}>
-										{frontmatter.date.replace(/-/g, "/")}
-									</time>
-								)}
-							</div>
-							<div class="home-news-card__content">
-								<Content />
-							</div>
-						</article>
-					))}
-				</div>
-			</section>
-		)
-	}
-
-	<section class="container content-section home-section home-latest">
-		<div class="section-heading section-heading--legacy">
-			<h2>{copy.latestHeading}</h2>
-		</div>
-
-		<div class="home-news__grid">
-			{
-				latestTopics.map((topic, index) => (
-					<article class="news-card">
-						<a
-							class="news-card__link"
-							href={withBasePath(
-								isEnglish
-									? topic.detailPathEn
-									: topic.detailPath,
-							)}
-						>
-							<div
-								class:list={[
-									"news-card__visual",
-									`visual-theme-${((index + 1) % 5) + 1}`,
-								]}
-							>
-								{topic.image && (
-									<img
-										src={topic.image}
-										alt={
-											topic.imageAlt ??
-											(isEnglish
-												? topic.titleEn || topic.title
-												: topic.title)
-										}
-										class="news-card__image"
-									/>
-								)}
-							</div>
-							<h3>
-								{isEnglish
-									? topic.titleEn || topic.title
-									: topic.title}
-							</h3>
-							<p class="news-card__date">
-								◷ {copy.articleMeta(topic)}
-							</p>
-						</a>
-					</article>
-				))
-			}
-		</div>
-	</section>
+			</div>
+		</section>
+	</div>
 </Layout>
