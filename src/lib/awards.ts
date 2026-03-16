@@ -7,7 +7,7 @@ export interface Award {
 	day: number;
 	title: string;
 	recipients: string[];
-	award_name: string;
+	award: string;
 	org: string;
 	href: string;
 	external: boolean;
