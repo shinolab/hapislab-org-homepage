@@ -617,7 +617,14 @@ a:hover {
 }
 
 .topic-article-hero-image {
-	margin: 0;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.topic-article-hero-image :is(img, picture) {
+	display: block;
+	width: 100%;
 }
 
 .topic-article-content {
