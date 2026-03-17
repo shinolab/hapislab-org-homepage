@@ -97,8 +97,9 @@ const projectEntries = visibleProjectItems.map((project) => ({
 
 const copy = isEnglish
 	? {
-			affiliation: "The University of Tokyo",
-			title: "Shinoda & Makino Lab",
+			tabtitle: "Shinoda & Makino Lab",
+			affiliation: "",
+			title: "Haptics: Just Beginning",
 			description:
 				"We aim for breakthroughs in real-world informatics by introducing new physical effects and structures into information systems. The current targets include sensing technologies of humans, their environments, and the interactions among them, as well as actuation technologies through the five senses, especially the sense of touch. Our research activities encompass basic theories, hardware and software development, and social implementation, such as the commercialization of our research.",
 			overviewHeading: "Haptics & Applied Physics in Synthesis",
@@ -112,8 +113,8 @@ const copy = isEnglish
 			logoAlt: "Shinoda & Makino Lab logo",
 		}
 	: {
-			affiliation: "東京大学",
-			title: "篠田・牧野研究室",
+			title: "これから始まるハプティクス",
+			tabtitle: "篠田・牧野研究室",
 			description:
 				"システムの中に新しい物理現象や物理的構造を導入することで，従来の壁を越える実世界情報環境を実現します．特に人間，環境，その相互作用のセンシングや，五感，特に触覚に働きかけて人間を支援する技術について，ハードウエアレベルからの提案を行っています．斬新な発想に基づく基礎的・普遍的成果を目指すとともに，それらが人々の問題を解決し，実用技術として幅広く活用されるまでのプロセスも研究のテーマに含まれます．",
 			overviewHeading: "Haptics & Applied Physics in Synthesis",
@@ -130,7 +131,7 @@ const copy = isEnglish
 ---
 
 <Layout
-	title={copy.title}
+	title={copy.tabtitle}
 	description={copy.description}
 	currentPath={currentPath}
 	locale={locale}
@@ -465,12 +466,10 @@ const copy = isEnglish
 		right: 0;
 	}
 
-	/* Disable default CSS animation - will be handled by JS */
 	[data-carousel-track] {
 		animation: none !important;
 	}
 
-	/* Use transition for discrete jumps */
 	[data-carousel-track].is-jumping {
 		transition: transform 0.4s ease-out !important;
 	}
@@ -493,14 +492,13 @@ const copy = isEnglish
 		let lastTimestamp = 0;
 		let animationId: number | null = null;
 
-		// States
 		let isManual = false;
-		let manualDirection = 0; // -1: left, 1: right
+		let manualDirection = 0;
 		let isLongPress = false;
 
-		const AUTO_SPEED = 0.04; // px per ms (auto scroll)
-		const MANUAL_SPEED = 0.8; // px per ms (long press scroll)
-		const ITEM_WIDTH = 200 + 20; // width + gap
+		const AUTO_SPEED = 0.04;
+		const MANUAL_SPEED = 0.8;
+		const ITEM_WIDTH = 200 + 20;
 		const HALF_WIDTH = track.scrollWidth / 2;
 
 		const update = (timestamp: number) => {
@@ -510,20 +508,15 @@ const copy = isEnglish
 
 			if (isManual) {
 				if (isLongPress) {
-					// Manual continuous scroll
 					currentX += manualDirection * MANUAL_SPEED * deltaTime;
 				}
-				// If not long press, currentX is updated once by moveByItem
 			} else {
-				// Auto scroll (always moving left)
 				currentX -= AUTO_SPEED * deltaTime;
 			}
 
-			// Infinite wrap
 			if (currentX > 0) currentX -= HALF_WIDTH;
 			if (currentX < -HALF_WIDTH) currentX += HALF_WIDTH;
 
-			// Use setProperty for performance and to ensure we override other styles
 			track.style.setProperty(
 				"transform",
 				`translateX(${currentX}px)`,
@@ -539,14 +532,12 @@ const copy = isEnglish
 
 			currentX += direction * ITEM_WIDTH;
 
-			// Brief delay to allow transition, then resume auto-scroll
 			setTimeout(() => {
 				track.classList.remove("is-jumping");
 				isManual = false;
 			}, 400);
 		};
 
-		// Event handlers
 		let pressTimer: number | null = null;
 
 		const onStart = (direction: number) => {
@@ -571,7 +562,6 @@ const copy = isEnglish
 			pressTimer = null;
 		};
 
-		// Mouse
 		prevBtn.addEventListener("mousedown", () => onStart(1));
 		nextBtn.addEventListener("mousedown", () => onStart(-1));
 
@@ -594,16 +584,11 @@ const copy = isEnglish
 
 		window.addEventListener("mouseup", onGlobalMouseUp);
 
-		// Stop scroll on hover
 		viewport.addEventListener("mouseenter", () => {
 			if (!isManual) {
-				// We can either pause or just keep it moving.
-				// The prompt says "hover pauses", let's keep that logic.
-				// For simplicity here, let's keep it moving unless clicking.
 			}
 		});
 
-		// Touch
 		prevBtn.addEventListener("touchstart", (e) => {
 			e.preventDefault();
 			onStart(1);
