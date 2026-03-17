@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import utokyoLogo from "../assets/University_of_Tokyo_logo_(2024).svg";
+
 import { siteMeta } from "../data/site";
 import { englishSiteMeta } from "../data/site-en";
 import { primaryNav } from "../data/site";
@@ -18,24 +21,38 @@ const footerNav = (locale === "en" ? englishPrimaryNav : primaryNav).filter(
 
 <footer class="site-footer">
 	<div class="container site-footer__inner">
-		<nav
-			class="site-footer__nav"
-			aria-label={locale === "en"
-				? "Footer navigation"
-				: "フッターナビゲーション"}
-		>
-			{
-				footerNav.map((item) => (
-					<a href={withBasePath(item.href)}>{item.label}</a>
-				))
-			}
-		</nav>
-		<p class="site-footer__meta">
-			© {
-				locale === "en"
-					? meta.englishName
-					: `${meta.japaneseName}/${meta.englishName}`
-			}
-		</p>
+		<div class="container site-footer__inner">
+			<div class="site-footer__logo">
+				<a
+					href="https://www.u-tokyo.ac.jp/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Image
+						src={utokyoLogo}
+						alt="東京大学 / The University of Tokyo"
+					/>
+				</a>
+			</div>
+			<nav
+				class="site-footer__nav"
+				aria-label={locale === "en"
+					? "Footer navigation"
+					: "フッターナビゲーション"}
+			>
+				{
+					footerNav.map((item) => (
+						<a href={withBasePath(item.href)}>{item.label}</a>
+					))
+				}
+			</nav>
+			<p class="site-footer__meta">
+				© {
+					locale === "en"
+						? meta.englishName
+						: `${meta.japaneseName}/${meta.englishName}`
+				}
+			</p>
+		</div>
 	</div>
 </footer>

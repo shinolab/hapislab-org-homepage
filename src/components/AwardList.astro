@@ -19,10 +19,7 @@ const formatMonthDay = (award: Award) =>
 		? `${award.month}/${award.day}`
 		: null;
 
-// Group awards by year
-const groupedAwards = [...awards]
-	.sort(sortAwardsByDate)
-	.reduce(
+const groupedAwards = [...awards].sort(sortAwardsByDate).reduce(
 	(acc, award) => {
 		const year = award.year;
 		if (!acc[year]) {

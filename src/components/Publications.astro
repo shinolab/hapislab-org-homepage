@@ -20,10 +20,7 @@ const formatAuthors = (authors: string[], japaneseStyle: boolean) => {
 	return `${authors.slice(0, -1).join(", ")} and ${authors.at(-1)}`;
 };
 
-const getCitationDisplay = (
-	publication: Publication,
-	locale: "ja" | "en",
-) => {
+const getCitationDisplay = (publication: Publication, locale: "ja" | "en") => {
 	const japaneseStyle = publication.lang === "ja";
 	const venueDetails = [
 		publication.volume ? `vol. ${publication.volume}` : "",
@@ -159,18 +156,24 @@ const groupedByType = TYPE_ORDER.map((type) => {
 														>
 															{citation.authorsText && (
 																<span class="citation-authors">
-																	{citation.authorsText}
+																	{
+																		citation.authorsText
+																	}
 																</span>
 															)}
 															<span class="citation-title">
-																{citation.titleText}
+																{
+																	citation.titleText
+																}
 															</span>
 															<span class="citation-venue">
 																{citation.japaneseStyle ? (
 																	<>
 																		{citation.venueName && (
 																			<span class="venue-name--plain">
-																				{citation.venueName}
+																				{
+																					citation.venueName
+																				}
 																			</span>
 																		)}
 																		{citation.venueDetails &&
@@ -191,7 +194,9 @@ const groupedByType = TYPE_ORDER.map((type) => {
 																	<>
 																		{citation.venueName && (
 																			<em class="venue-name">
-																				{citation.venueName}
+																				{
+																					citation.venueName
+																				}
 																			</em>
 																		)}
 																		{citation.venueDetails &&
@@ -207,13 +212,19 @@ const groupedByType = TYPE_ORDER.map((type) => {
 																{publication.note && (
 																	<span class="citation-note">
 																		{" "}
-																		[{publication.note}]
+																		[
+																		{
+																			publication.note
+																		}
+																		]
 																	</span>
 																)}
 																{citation.languageNote && (
 																	<span class="citation-note">
 																		{" "}
-																		{citation.languageNote}
+																		{
+																			citation.languageNote
+																		}
 																	</span>
 																)}
 															</span>
@@ -230,7 +241,8 @@ const groupedByType = TYPE_ORDER.map((type) => {
 				</div>
 			</section>
 		))
-	}</div>
+	}
+</div>
 
 <style>
 	.publications-container {
@@ -282,7 +294,6 @@ const groupedByType = TYPE_ORDER.map((type) => {
 		line-height: 1.2;
 	}
 
-	/* Table override */
 	.legacy-data-table--publications tr,
 	.legacy-data-table--publications tr:nth-child(even) {
 		background: transparent !important;

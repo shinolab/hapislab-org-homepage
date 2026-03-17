@@ -32,7 +32,7 @@ export interface Student {
 	nameEn: string;
 	email?: string;
 	href?: string;
-	campus?: string; // Kashiwa or Hongo
+	campus?: string;
 	degrees: {
 		B?: StudentDegree;
 		M?: StudentDegree;
@@ -170,29 +170,29 @@ export function processMembers(data: MemberData, now: Date = new Date()) {
 	const getFiscalYear = (dateStr: string) => {
 		const date = new Date(dateStr);
 		const year = date.getFullYear();
-		const month = date.getMonth(); // 0 is January
+		const month = date.getMonth();
 		return month < 3 ? year - 1 : year;
 	};
 
-	// Process Staff Alumni
+
 	data.staff.forEach((s) => {
 		if (s.endDate && new Date(s.endDate) <= now) {
 			const fy = getFiscalYear(s.endDate);
 			if (!alumniByYear[fy]) alumniByYear[fy] = [];
-					alumniByYear[fy].push({
-						name: s.name,
-						nameEn: s.nameEn,
-						role: s.role,
-						roleEn: s.roleEn,
-						gradDate: s.endDate,
-						href: s.href,
-						type: 'staff',
-						sortOrder: 0, // Staff first
-					});
+			alumniByYear[fy].push({
+				name: s.name,
+				nameEn: s.nameEn,
+				role: s.role,
+				roleEn: s.roleEn,
+				gradDate: s.endDate,
+				href: s.href,
+				type: 'staff',
+				sortOrder: 0,
+			});
 		}
 	});
 
-	// Process Student Alumni (Flattening the nested structure for display only)
+
 	data.students.forEach((student) => {
 		let isActive = false;
 		if (student.degrees) {
@@ -205,7 +205,7 @@ export function processMembers(data: MemberData, now: Date = new Date()) {
 					isActive = true;
 				} else {
 					const fy = getFiscalYear(d.grad);
-					
+
 					if (!alumniByYear[fy]) alumniByYear[fy] = [];
 					alumniByYear[fy].push({
 						name: student.name,
@@ -234,7 +234,7 @@ export function processMembers(data: MemberData, now: Date = new Date()) {
 		}
 	});
 
-	// Sort alumni within each year: Staff -> D -> M -> B, then by name
+
 	Object.keys(alumniByYear).forEach((year) => {
 		alumniByYear[Number(year)].sort((a, b) => {
 			if (a.sortOrder !== b.sortOrder) return a.sortOrder - b.sortOrder;

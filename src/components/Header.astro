@@ -19,12 +19,8 @@ const homePath = navItems[0]?.href ?? "/";
 const homeHref = withBase(homePath) ?? homePath;
 const topbarMeta =
 	locale === "en"
-		? "Graduate School of Frontier Sciences / Graduate School of Information Science and Technology / School of Engineering"
-		: "東京大学大学院 新領域創成科学研究科 / 情報理工学系研究科 / 工学部計数工学科";
-const topbarSub =
-	locale === "en"
 		? "The University of Tokyo"
-		: "Graduate School of Frontier Sciences, The University of Tokyo";
+		: "東京大学 新領域/情報理工/工学部";
 
 const normalizePath = (path: string) => {
 	if (path !== "/" && path.endsWith("/")) {
@@ -70,9 +66,10 @@ const isActive = (href: string) => {
 
 <div class="site-topbar">
 	<div class="container site-topbar__inner">
-		<div>
-			<p class="site-topbar__meta">{topbarMeta}</p>
-			<p class="site-topbar__sub">{topbarSub}</p>
+		<div class="site-topbar__meta-container">
+			<span class="site-topbar__text-bundle">
+				{topbarMeta}
+			</span>
 		</div>
 	</div>
 </div>
@@ -88,9 +85,10 @@ const isActive = (href: string) => {
 				height={48}
 				loading="eager"
 			/>
-			<span class="site-brand__name">{meta.englishName}</span>
+			<span class="site-brand__name">
+				{locale === "en" ? meta.englishName : meta.japaneseName}
+			</span>
 		</a>
-
 		<button
 			type="button"
 			class="custom-mobile-menu-btn"
