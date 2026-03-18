@@ -214,9 +214,14 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Two-Dimensional Measurement of Airborne Ultrasound Field Using Thermal Images
+  refId: onishi-2022-two
   doi: 10.1103/PhysRevApplied.18.044047
   note: Open Access
   journal: Physical Review Applied
+  volume: 18
+  issue: 4
+  pages: "044047"
+  numpages: 6
 
 - type: article
   year: 2021
@@ -226,9 +231,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Non-Vibratory Pressure Sensation Produced by Ultrasound Focus Moving Laterally and Repetitively with Fine Spatial Step Width
+  refId: morisaki-2021-non
   doi: 10.1109/TOH.2021.3125843
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 15
+  number: 2
+  pages: 441-450
 
 - type: article
   year: 2022
@@ -282,9 +291,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Spatiotemporal Pinpoint Cooling Sensation Produced by Ultrasound-Driven Mist Vaporization on Skin
+  refId: nakajima-2021-spatiotemporal
   doi: 10.1109/TOH.2021.3086516
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 14
+  number: 4
+  pages: 874-884
 
 - type: article
   year: 2021
@@ -328,9 +341,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: 'AUTD3: Scalable Airborne Ultrasound Tactile Display'
+  refId: suzuki-2021-autd3
   doi: 10.1109/TOH.2021.3069976
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 14
+  number: 4
+  pages: 740-749
 
 - type: article
   year: 2020
@@ -350,9 +367,13 @@
     - Keisuke Hasegawa
     - Hiroyuki Shinoda
   title: Tactile Stimulation by Repetitive Lateral Movement of Midair Ultrasound Focus
+  refId: takahashi-2019-tactile
   doi: 10.1109/TOH.2019.2946136
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 13
+  number: 2
+  pages: 334-342
 
 - type: article
   year: 2020
@@ -362,9 +383,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Reducing Amplitude Fluctuation by Gradual Phase Shift in Midair Ultrasound Haptics
+  refId: suzuki-2020-reducing
   doi: 10.1109/TOH.2020.2965946
   note: Open Access
   journal: IEEE transactions on haptics
+  volume: 13
+  number: 1
+  pages: 87-93
 
 - type: article
   year: 2019
@@ -374,9 +399,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Midair Haptic Pursuit
+  refId: yoshimoto-2019-midair
   doi: 10.1109/TOH.2019.2906163
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 12
+  number: 4
+  pages: 652-657
 
 - type: article
   year: 2019
@@ -388,9 +417,13 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Acoustical boundary hologram for macroscopic rigid-body levitation
+  refId: inoue-2019-acoustical
   doi: 10.1121/1.5087130
   note: Open Access
   journal: Journal of the Acoustical Society of America
+  volume: 145
+  number: 1
+  pages: 328-337
 
 - type: article
   year: 2019
@@ -452,9 +485,13 @@
     - Keisuke Hasegawa
     - Hiroyuki Shinoda
   title: Aerial Vibrotactile Display Based on Multiunit Ultrasound Phased Array
+  refId: hasegawa-2018-aerial
   doi: 10.1109/TOH.2018.2799220
   note: Open Access
   journal: IEEE Transactions on Haptics
+  volume: 11
+  number: 3
+  pages: 367-377
 
 - type: article
   year: 2018
@@ -695,8 +732,12 @@
     - Takayuki Iwamoto
     - Hiroyuki Shinoda
   title: Noncontact Tactile Display Based on Radiation Pressure of Airborne Ultrasound
+  refId: hoshi-2010-noncontact
   href: https://drive.google.com/file/d/1OjtZRwKFrLtW81CyUEC052zX7qTuYZoa/view?usp=sharing
   journal: IEEE Transactions on Haptics
+  volume: 3
+  number: 3
+  pages: 155-165
 
 - type: article
   year: 2010
@@ -1629,9 +1670,11 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Rendering Ultrasound Pressure Distribution on Hand Surface in Real-Time
+  refId: matsubayashi-2020-rendering
   doi: 10.1007/978-3-030-58147-3_45
   note: Open Access
-  booktitle: International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (Euro Haptics)
+  booktitle='Haptics: Science, Technology, Applications'
+  pages: 407-415
 
 - type: inproceedings
   year: 2020
@@ -1847,8 +1890,10 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Display of Haptic Shape Using Ultrasound Pressure Distribution Forming Cross-Sectional Shape
+  refId: matsubayashi-2019-display
   href: https://drive.google.com/file/d/1ooqgEeddn-88JLjmXRmqiTqTpZROIfCP/view?usp=sharing
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
+  pages: 419-424
 
 - type: inproceedings
   year: 2019
@@ -1860,7 +1905,7 @@
     - Hiroyuki Shinoda
   title: Midair Tactile Reproduction of Real Objects Using Microphone-Based Tactile Sensor Array
   href: https://drive.google.com/open?id=1lgYpj1mcmzGA6AvDjbwjcgIWWPSk85jN
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
   note: Work-in-Progress
 
 - type: inproceedings
@@ -1874,7 +1919,7 @@
     - Hiroyuki Shinoda
   title: Spatial recognition through upper-body proximity sensing and displaying wearable device
   href: https://drive.google.com/file/d/1qKDIjB_YrxBq8lLsVKvo1PKpodgQsi78/view?usp=sharing
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
   note: Work-in-Progress
 
 - type: inproceedings
@@ -1886,7 +1931,7 @@
     - Hiroyuki Shinoda
   title: Tactile Perception Similarity Between Physically Continuous Stimulation and Discrete Point Stimulation
   href: https://drive.google.com/file/d/1V3xV1qVpRVzrJ7ejx9ld_qDCKvL_8VhL/view?usp=sharing
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
   note: Work-in-Progress
 
 - type: inproceedings
@@ -1897,7 +1942,7 @@
     - Hiroyuki Shinoda
   title: Midair Click of Dual-Layer Haptic Button
   href: https://drive.google.com/open?id=11GbW4-ox7jA9AnFo1ls5acsxWWODn5he
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
 
 - type: inproceedings
   year: 2019
@@ -1906,7 +1951,7 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Noncontact Pain Display by Temperature Control
-  booktitle: IEEE World Haptics Conference (WHC)
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
   href: https://drive.google.com/file/d/1RDJh56ndxD53aEkiyc7hO_i_IOwGtN_f/view?usp=sharing
   note: Work-in-Progress
 
@@ -1918,7 +1963,7 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Thresholds of Haptic Perception and Bone Conduction in Midair Facial Stimulation
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
   href: https://drive.google.com/file/d/1LWbyTdGafseVnoPf6SmCSG99ieAW92LR/view?usp=sharing
   note: Work-in-Progress
 
@@ -1930,8 +1975,10 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Midair Hand Guidance by an Ultrasound Virtual Handrail
+  refId: suzuki-2019-midair
   href: https://drive.google.com/file/d/11P_0jPkIcL0T8Bqxh6nE1ZUiIoVutknc/view?usp=sharing
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2019 IEEE World Haptics Conference (WHC)
+  pages: 271-276
 
 - type: inproceedings
   year: 2019
@@ -1940,9 +1987,14 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Direct Finger Manipulation of 3D Object Image with Ultrasound Haptic Feedback
+  refId: matsubayashi-2019-direct
   note: Open Access
   href: https://dl.acm.org/citation.cfm?id=3300317
-  booktitle: CHI Conference on Human Factors in Computing Systems
+  address: New York, NY, USA
+  booktitle: Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems
+  pages: 1–11
+  location: Glasgow, Scotland Uk
+  series: CHI '19
 
 - type: inproceedings
   year: 2019
@@ -2118,8 +2170,10 @@
     - Keisuke Hasegawa
     - Hiroyuki Shinoda
   title: Lateral Modulation of Midair Ultrasound Focus for Intensified Vibrotactile Stimuli
+  refId: takahashi-2018-lateral
   href: https://drive.google.com/file/d/1ENdHs_uyE5BNPSIgZpjepV5238cfjPfS/view?usp=sharing
-  booktitle: International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (Euro Haptics)
+  booktitle: 'Haptics: Science, Technology, and Applications'
+  pages: 276-288
 
 - type: inproceedings
   year: 2018
@@ -2129,8 +2183,10 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Haptic Tracing of Midair Linear Trajectories Presented by Ultrasound Bessel Beams
+  refId: suzuki-2018-haptic
   href: https://drive.google.com/file/d/1OhUhxabTFMwGMvhhxzKJLt23y-_UnHjg/view?usp=sharing
-  booktitle: International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (Eurohaptics)
+  booktitle: 'Haptics: Science, Technology, and Applications'
+  pages: 209--220
 
 - type: inproceedings
   year: 2018
@@ -2498,9 +2554,14 @@
     - Seki Inoue
     - Hiroyuki Shinoda
   title: HaptoClone (Haptic-Optical Clone) for Mutual Tele-Environment by Real-time 3D Image Transfer with Midair Force Feedback
+  refId: makino-2016-haptoclone
   doi: 10.1145/2858036.2858481
-  booktitle: CHI Conference on Human Factors in Computing Systems
+  booktitle: Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems
   href: https://drive.google.com/open?id=1YzvpnkSgJ6GOutqeWQuOyKbgMrS19LiV
+  address: New York, NY, USA
+  pages: 1980–1990
+  location: San Jose, California, USA
+  series: CHI '16
 
 - type: inproceedings
   year: 2016
@@ -2616,8 +2677,10 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Active Touch Perception Produced by Airborne Ultrasonic Haptic Hologram
-  booktitle: IEEE World Haptics Conference (WHC)
+  refId: inoue-2015-active
   href: https://drive.google.com/file/d/1bvZg-uldmHakDNDBW4rOjlQ_G15p1tQF/view?usp=sharing
+  booktitle: 2015 IEEE World Haptics Conference (WHC)
+  pages: 362-367
 
 - type: inproceedings
   year: 2015
@@ -2705,9 +2768,14 @@
     - Seki Inoue
     - Hiroyuki Shinoda
   title: 'HaptoMime: Mid-Air Haptic Interaction with a Floating Virtual Screen'
+  refId: monnai-2014-haptomime
   doi: 10.1145/2642918.2647407
-  booktitle: 27th ACM User Interface Software and Technology Symposium (UIST2014)
   href: https://drive.google.com/file/d/1Rji2rqTZD31IB6h896gkDi-K__yZ9QSu/view?usp=sharing
+  address: New York, NY, USA
+  booktitle: Proceedings of the 27th Annual ACM Symposium on User Interface Software and Technology
+  pages: 663–667
+  location: Honolulu, Hawaii, USA
+  series: UIST '14
 
 - type: inproceedings
   year: 2014
@@ -2899,8 +2967,10 @@
     - Keisuke Hasegawa
     - Hiroyuki Shinoda
   title: Aerial Display of Vibrotactile Sensation with High Spatial-Temporal Resolution using Large-Aperture Airborne Ultrasound Phased Array
-  booktitle: IEEE World Haptics Conference
+  refId: hasegawa-2013-aerial
   href: https://drive.google.com/file/d/1nQiCNBSM0VfciotvpWnJACoUjwt4x-m_/view?usp=sharing
+  booktitle: 2013 World Haptics Conference (WHC)
+  pages: 31-36
 
 - type: inproceedings
   year: 2013
@@ -2908,7 +2978,7 @@
     - Masahiro Fujiwara
     - Hiroyuki Shinoda
   title: Noncontact Human Force Capturing based on Surface Hardness Measurement
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2013 World Haptics Conference (WHC)
   href: https://drive.google.com/file/d/1WzTHxoOsVSxuRqqr-Gu2DS82YXZOcTKX/view?usp=sharing
 
 - type: inproceedings
@@ -2918,7 +2988,7 @@
     - Hiroyuki Shinoda
     - Masashi Konyo
   title: Sharp Tactile Sensation using Superposition of Vibrotactile Stimuli in Different Phases
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2013 World Haptics Conference (WHC)
   href: https://drive.google.com/file/d/1gKt5wgWg1a3PeEpt4UyiNmezvLt56UFk/view?usp=sharing
 
 - type: inproceedings
@@ -2927,7 +2997,7 @@
     - Kazuma Yoshino
     - Hiroyuki Shinoda
   title: Visio-Acoustic Screen for Contactless Touch Interface with Tactile Sensation
-  booktitle: IEEE World Haptics Conference
+  booktitle: 2013 World Haptics Conference (WHC)
   href: https://drive.google.com/file/d/1LddKpfaM5HXtLeEcRPTFBXsNjz07LN86/view?usp=sharing
 
 - type: inproceedings
@@ -3292,8 +3362,14 @@
     - Kei Nakatsuma
     - Hiroyuki Shinoda
   title: Touchable Holography
-  booktitle: ACM SIGGRAPH Emerging Technologies
+  refId: hoshi-2009-touchable
   href: https://drive.google.com/file/d/1HUxICzf01gzKAhd97YLivBCH8TS_6652/view?usp=sharing
+  address: New York, NY, USA
+  booktitle: ACM SIGGRAPH 2009 Emerging Technologies
+  articleno: 23
+  numpages: 1
+  location: New Orleans, Louisiana
+  series: SIGGRAPH '09
 
 - type: inproceedings
   year: 2009
@@ -3441,7 +3517,12 @@
     - Mari Tatezono
     - Hiroyuki Shinoda
   title: Non-contact Method for Producing Tactile Sensation Using Airborne Ultrasound
-  booktitle: 'Haptics: Perception, Devices and Scenarios (Eurohaptics)'
+  refId: iwamoto-2008-non
+  href: https://drive.google.com/file/d/1AlQjG74_lt_pdf6wPuvF8Ewe3eB158AM/view?usp=sharing
+  booktitle: 'Haptics: Perception, Devices and Scenarios'
+  publisher: Springer Berlin Heidelberg
+  address: Berlin, Heidelberg
+  pages: 504--513
 
 - type: inproceedings
   year: 2007
