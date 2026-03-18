@@ -1,5 +1,6 @@
 ---
 import type { Publication } from "../lib/site-data";
+import { getPublicationCitationDisplay } from "../lib/publication-citation";
 
 interface Props {
 	publications: Publication[];
@@ -13,40 +14,6 @@ const visiblePublications =
 	locale === "en"
 		? publications.filter((publication) => publication.type !== "domestic")
 		: publications;
-
-const formatAuthors = (authors: string[], japaneseStyle: boolean) => {
-	if (authors.length === 0) return "";
-	if (authors.length === 1 || japaneseStyle) return authors.join(", ");
-	return `${authors.slice(0, -1).join(", ")} and ${authors.at(-1)}`;
-};
-
-const getCitationDisplay = (publication: Publication, locale: "ja" | "en") => {
-	const japaneseStyle = publication.lang === "ja";
-	const venueDetails = [
-		publication.volume ? `vol. ${publication.volume}` : "",
-		publication.number ? `no. ${publication.number}` : "",
-		publication.pages ? `pp. ${publication.pages}` : "",
-	]
-		.filter(Boolean)
-		.join(", ");
-
-	return {
-		japaneseStyle,
-		authorsText: (() => {
-			const authors = formatAuthors(publication.authors, japaneseStyle);
-			if (!authors) return "";
-			return japaneseStyle ? `${authors}.` : `${authors},`;
-		})(),
-		titleText: japaneseStyle
-			? `${publication.title}.`
-			: `"${publication.title},"`,
-		venueName: publication.journal || publication.booktitle || "",
-		venueDetails,
-		doiText: publication.doi ? `doi: ${publication.doi}` : "",
-		languageNote:
-			locale === "en" && publication.lang === "ja" ? "(in Japanese)" : "",
-	};
-};
 
 const typeLabels = {
 	ja: {
@@ -123,7 +90,8 @@ const groupedByType = TYPE_ORDER.map((type) => {
 								<table class="legacy-data-table legacy-data-table--publications">
 									<tbody>
 										{items.map((publication) => {
-											const citation = getCitationDisplay(
+											const citation =
+												getPublicationCitationDisplay(
 												publication,
 												locale,
 											);
