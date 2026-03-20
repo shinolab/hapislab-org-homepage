@@ -1074,7 +1074,7 @@ a {
 		align-items: center !important;
 		justify-content: space-between !important;
 		min-height: 100px !important;
-		padding: 10px 15px !important;
+		padding: 0rem 0rem !important;
 		position: relative !important;
 	}
 
@@ -1331,18 +1331,25 @@ header [class*="logo"]:not(.custom-mobile-logo-img) {
 	}
 }
 
-@media (max-width: 570px) {
+@media (max-width: 520px) {
+    /* ロゴ画像を 80% に縮小 */
+    .custom-mobile-logo-img {
+        height: 2.64rem !important;
+        width: auto !important;
+    }
+
+    /* 日本語：フォントサイズを 1.1rem に */
+    html[lang="ja"] .site-brand__name {
+        white-space: nowrap !important;  
+        font-size: 1.1rem !important;     
+    }
+
+    /* 英語など：フォントサイズを 1.1rem にし、必要なら折り返し */
     html:not([lang="ja"]) .site-brand__name {
         white-space: normal !important;   
         word-break: break-word;         
-        max-width: 95% !important;      
+        max-width: 75% !important;      
         line-height: 1.2 !important;     
-        font-size: 1.2rem !important;     
-    }
-
-
-    html[lang="ja"] .site-brand__name {
-        white-space: nowrap !important;  
-        font-size: 1.2rem !important;     
+        font-size: 1.1rem !important;     
     }
 }
