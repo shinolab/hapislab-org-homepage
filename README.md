@@ -47,7 +47,7 @@
 
 ### GitHub Web UI を使う
 
-1. [リポジトリページ](https://github.com/shinolab/hapislab-org-homepage)でファイルを直接編集.
+1. [リポジトリページ](https://github.com/shinolab/hapislab.org.git)でファイルを直接編集.
 2. "Commit changes..." から "Create a new branch..." を選択して PR を作成.
 
 ---
