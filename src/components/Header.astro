@@ -71,30 +71,56 @@ const isActive = (href: string) => {
                 {topbarMeta}
             </span>
         </div>
-        <div class="site-topbar__rss">
-            <a
-                href={withBasePath("/rss.xml")}
-                target="_blank"
-                title="RSS Feed"
-                aria-label="RSS Feed"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="rss-icon"
+        <div class="site-topbar__actions">
+            <div class="site-topbar__rss">
+                <a
+                    href={withBasePath("/rss.xml")}
+                    target="_blank"
+                    title="RSS Feed"
+                    aria-label="RSS Feed"
                 >
-                    <path d="M4 11a9 9 0 0 1 9 9"></path>
-                    <path d="M4 4a16 16 0 0 1 16 16"></path>
-                    <circle cx="5" cy="19" r="1"></circle>
-                </svg>
-            </a>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="topbar-icon"
+                    >
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+            </div>
+            <div class="site-topbar__search">
+                <button
+                    type="button"
+                    id="search-open"
+                    title={locale === "en" ? "Search" : "検索"}
+                    aria-label={locale === "en" ? "Search" : "検索"}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="topbar-icon"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -169,18 +195,30 @@ const isActive = (href: string) => {
         line-height: 1;
     }
 
-    .site-topbar__rss a {
+    .site-topbar__actions {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .site-topbar__rss a,
+    .site-topbar__search button {
         color: rgba(255, 255, 255, 0.85);
         display: flex;
         align-items: center;
         transition: color 0.3s ease;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
     }
 
-    .site-topbar__rss a:hover {
+    .site-topbar__rss a:hover,
+    .site-topbar__search button:hover {
         color: #fff;
     }
 
-    .rss-icon {
+    .topbar-icon {
         width: 1.25rem;
         height: 1.25rem;
     }

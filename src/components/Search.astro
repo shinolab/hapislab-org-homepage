@@ -1,0 +1,216 @@
+---
+import { withBasePath } from "../lib/urls";
+
+interface Props {
+    locale?: "ja" | "en";
+}
+
+const { locale = "ja" } = Astro.props;
+---
+
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="search-modal__overlay" data-search-close></div>
+    <div class="search-modal__content">
+        <div class="search-modal__header">
+            <h2 id="search-title" class="sr-only">{locale === 'en' ? 'Search Site' : 'サイト内検索'}</h2>
+            <button type="button" class="search-modal__close" data-search-close aria-label={locale === 'en' ? 'Close search' : '検索を閉じる'}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="search-ui">
+            <div class="search-notice" style="padding: 2rem; text-align: center; color: var(--text-subtle);">
+                {locale === 'en' ? "Preparing search..." : "検索を準備中..."}
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href={withBasePath("/pagefind/pagefind-ui.css")} rel="stylesheet" />
+
+<script is:inline define:vars={{ locale, bundlePath: withBasePath("/pagefind/") }}>
+    async function initPagefind() {
+        const notice = document.querySelector('.search-notice');
+        const scriptPath = bundlePath + 'pagefind-ui.js';
+        
+        try {
+            // Check if search index exists
+            const resp = await fetch(scriptPath);
+            if (!resp.ok) throw new Error('Search index not found');
+            
+            // Load script dynamically
+            await new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = scriptPath;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+
+            if (window.PagefindUI) {
+                if (notice) notice.style.display = 'none';
+                new PagefindUI({
+                    element: "#search-ui",
+                    bundlePath: bundlePath,
+                    showImages: false,
+                    translations: locale === 'en' ? undefined : {
+                        placeholder: "検索キーワードを入力...",
+                        clear_search: "クリア",
+                        load_more: "もっと見る",
+                        search_label: "サイト内検索",
+                        filters_label: "フィルタ",
+                        zero_results: "[query] に一致する結果が見つかりませんでした",
+                        many_results: "[query] の検索結果: [count]件",
+                        one_result: "[query] の検索結果: 1件",
+                        searching: "[query] を検索中..."
+                    }
+                });
+            }
+        } catch (e) {
+            console.warn("Pagefind UI could not be loaded. This is expected in development mode.");
+            if (notice) {
+                notice.innerHTML = locale === 'en' 
+                    ? "Search functionality is available after build.<br><small>Run 'npm run build && npm run preview' to test locally.</small>" 
+                    : "検索機能はビルド後に有効になります。<br><small>'npm run build && npm run preview' で動作確認が可能です。</small>";
+            }
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const searchOpen = document.getElementById('search-open');
+        const searchModal = document.getElementById('search-modal');
+        const closeButtons = document.querySelectorAll('[data-search-close]');
+        
+        if (!searchOpen || !searchModal) return;
+
+        initPagefind();
+
+        function openSearch() {
+            searchModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            const input = searchModal.querySelector('input');
+            if (input) setTimeout(() => input.focus(), 100);
+        }
+
+        function closeSearch() {
+            searchModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        searchOpen.onclick = openSearch;
+        closeButtons.forEach(btn => btn.onclick = closeSearch);
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchModal.getAttribute('aria-hidden') === 'false') {
+                closeSearch();
+            }
+        });
+    });
+</script>
+
+<style>
+    .search-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .search-modal[aria-hidden="false"] {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .search-modal__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+    }
+
+    .search-modal__content {
+        position: relative;
+        background: var(--surface);
+        width: 100%;
+        max-width: 800px;
+        max-height: 80vh;
+        border-radius: 8px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 5vh;
+    }
+
+    .search-modal__header {
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .search-modal__close {
+        background: none;
+        border: none;
+        color: var(--text-subtle);
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+    }
+
+    .search-modal__close:hover {
+        color: var(--text);
+    }
+
+    #search-ui {
+        padding: 1.5rem;
+        overflow-y: auto;
+        flex-grow: 1;
+        min-height: 200px;
+    }
+
+    /* Pagefind UI Customization */
+    :root {
+        --pagefind-ui-primary: var(--primary);
+        --pagefind-ui-text: var(--text);
+        --pagefind-ui-background: var(--surface);
+        --pagefind-ui-border: var(--border);
+        --pagefind-ui-tag: #eee;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    @media (max-width: 640px) {
+        .search-modal {
+            padding: 1rem;
+        }
+        .search-modal__content {
+            margin-top: 2vh;
+            max-height: 90vh;
+        }
+    }
+</style>
