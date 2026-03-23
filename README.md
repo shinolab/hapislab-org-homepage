@@ -13,8 +13,8 @@
 1. **事前準備**: [Node.js](https://nodejs.org/) (v22以上推奨) をインストール.
 2. **クローンとセットアップ**:
     ```sh
-    git clone https://github.com/shinolab/hapislab-org-homepage.git
-    cd hapislab-org-homepage
+    git clone https://github.com/shinolab/hapislab.org.git
+    cd hapislab.org
     npm install
     ```
 3. **開発サーバーの起動**:
