@@ -1527,7 +1527,6 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Latency Compensation in Ultrasound Tactile Presentation by Linear Prediction of Hand Posture
-  note: DRAFT
   href: https://drive.google.com/file/d/1wAPc_AOjK9-RfLGLpaZCLrH3jVOknJtX/view?usp=sharing
   booktitle: International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (Eurohaptics)
   pages: 365–377
@@ -1598,7 +1597,6 @@
     - Hiroyuki Shinoda
   title: Performance Evaluation of Airborne Ultrasound Focus Measurement Using Thermal Imaging on the Surface of a Finger
   refId: iwabuchi-2023-performance
-  note: DRAFT
   href: https://drive.google.com/file/d/1Fn2JTQ6kpUuQCaHaleFxw-gjlKKPsw01/view?usp=drive_link
   booktitle: IEEE World Haptics
   pages: 210–215
@@ -1880,7 +1878,6 @@
   title: Transducer Preselection in ultrasonic phased array to form multiple foci on a non-planar surface
   booktitle: IEEE Haptic Symposium 2022
   href: https://drive.google.com/file/d/1BWgp_2ksb1DmdKb-fSMJP6sT8MdHc1s-/view?usp=sharing
-  note: DRAFT
 
 - type: inproceedings
   year: 2022
@@ -1891,7 +1888,6 @@
   title: Accurate Control of Sound Field Amplitude for Ultrasound Haptic Rendering Using the Levenberg-Marquardt Method
   booktitle: IEEE Haptic Symposium
   href: https://drive.google.com/file/d/1XWagmK7kLu0A3TZEQMA6E616iglIy7gL/view?usp=sharing
-  note: DRAFT
 
 - type: inproceedings
   year: 2021
@@ -2041,7 +2037,6 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Rendering Softness Using Airborne Ultrasound
-  note: DRAFT
   href: https://drive.google.com/file/d/1sFnf1A2Q6GIxwVr90rMudrlpSIM4KRms/view?usp=sharing
   booktitle: IEEE World Haptics Conference (WHC)
   pages: 355–360
@@ -2056,7 +2051,6 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Tactile Perception Characteristics of Lips Stimulated by Airborne Ultrasound
-  note: DRAFT
   href: https://drive.google.com/file/d/1Kj6h8KDc086-F7Lk5lsOpxq4dGv9VkAN/view?usp=sharing
   booktitle: IEEE World Haptics Conference (WHC)
   pages: 607–612
@@ -2071,7 +2065,6 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Workspace Evaluation of Long-Distance Midair Haptic Display Using Curved Reflector
-  note: DRAFT
   href: https://drive.google.com/file/d/18LRkJh_oFL5ZZbCY5MfPa5UMkNIVUHh5/view?usp=sharing
   booktitle: IEEE World Haptics Conference (WHC)
   pages: 85–90
@@ -2086,7 +2079,6 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Reflection Pattern Sensing for Valid Airborne Ultrasound Tactile Display
-  note: DRAFT
   href: https://drive.google.com/file/d/1KIap61_J12XAYs3_8wv64kyXcYFzdBJR/view?usp=sharing
   booktitle: IEEE World Haptics Conference (WHC)
   pages: 121–126
