@@ -15,6 +15,7 @@ def test_validate_pages_line():
     assert validate_pages_line("pages: 10 -20") == range_err_msg
     assert validate_pages_line("pages: 10- 20") == range_err_msg
     assert validate_pages_line("pages: 10 – 20") == range_err_msg
+    assert validate_pages_line("pages: 10　–　20") == range_err_msg
     assert validate_pages_line("pages: 1+13") == range_err_msg
 
     # Alphanumeric / IDs (should pass)
@@ -33,6 +34,10 @@ def test_validate_name_japanese():
     name_err_msg = "Japanese names must have a space between surname and given name unless '# allow-surname-only' comment is set"
 
     assert validate_name("田中 太郎") is None
+    assert (
+        validate_name("田中　太郎")
+        == "Full-width space is not allowed. Use half-width space instead"
+    )
     assert validate_name("田中太郎") == name_err_msg
     assert validate_name("田中太郎 # allow-surname-only") is None
     assert validate_name("田中 太郎 (OB)") is None

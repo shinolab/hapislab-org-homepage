@@ -56,6 +56,9 @@ def validate_name(name, comment=""):
     if not name:
         return None
 
+    if "\u3000" in name:
+        return "Full-width space is not allowed. Use half-width space instead"
+
     # Check for Japanese names (CJK characters)
     if re.search(r"[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]", name):
         clean_name = re.sub(r"\s*(\(OB\)|\*|（.+）|\(.+\))$", "", name).strip()
