@@ -18,38 +18,6 @@
     D:
       start: 2023-04-01
       grad: ""
-- name: 上島 直登
-  nameEn: Naoto Uejima
-  email: uejima@hapis.k.u-tokyo.ac.jp
-  campus: Hongo
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 藤井 陽太
-  nameEn: Yota Fujii
-  email: fujii@hapis.k.u-tokyo.ac.jp
-  campus: Hongo
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 日高 祐哉
-  nameEn: Yuya Hidaka
-  email: hidaka@hapis.k.u-tokyo.ac.jp
-  campus: Hongo
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 池本 開
-  nameEn: Kai Ikemoto
-  email: ikemoto@hapis.k.u-tokyo.ac.jp
-  campus: Hongo
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
 - name: 堤 大河
   nameEn: Taiga Tsutsumi
   email: tsutsumi@hapis.k.u-tokyo.ac.jp
@@ -143,46 +111,6 @@
     D:
       start: 2024-04-01
       grad: ""
-- name: 孙 啓寧
-  nameEn: Qining Sun
-  email: q.sun@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    M:
-      start: 2023-04-01
-      grad: ""
-- name: 横田 恵
-  nameEn: Kei Yokota
-  email: yokota@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 板東 大雅
-  nameEn: Taiga Bando
-  email: bando@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 徳永 大翔
-  nameEn: Yamato Tokunaga
-  email: tokunaga@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
-- name: 竹内 怜
-  nameEn: Rei Takeuchi
-  email: takeuchi@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    M:
-      start: 2024-04-01
-      grad: ""
 - name: 李 秋儀
   nameEn: Quiyi Li
   email: li@hapis.k.u-tokyo.ac.jp
@@ -241,6 +169,108 @@
     M:
       grad: 2025-09-31
       thesis: 三次元骨格解析を用いた盲導犬の実訓練評価システム
+- name: 孫 啓寧
+  nameEn: Qining Sun
+  email: q.sun@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    M:
+      start: 2023-04-01
+      grad: 2026-03-31
+      thesis: Understanding human prediction of robot turning direction
+- name: 竹内 怜
+  nameEn: Rei Takeuchi
+  email: takeuchi@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 空中超音波を用いた静止画像に連動した他点触覚刺激の設計手法
+- name: 徳永 大翔
+  nameEn: Yamato Tokunaga
+  email: tokunaga@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 身体近傍での接触体験を目指したハーフミラーと空中超音波触覚を用いたインタラクションシステム
+- name: 横田 恵
+  nameEn: Kei Yokota
+  email: yokota@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 空中超音波による角層水分量制御の研究
+- name: 板東 大雅
+  nameEn: Taiga Bando
+  email: bando@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 空中超音波触覚ディスプレイにおけるランダム開口マスクを用いたグレーティングローブの低減手法
+- name: 上島 直登
+  nameEn: Naoto Uejima
+  email: uejima@hapis.k.u-tokyo.ac.jp
+  campus: Hongo
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 深層学習を用いた皮膚接触時の映像からの押圧推定
+- name: 池本 開
+  nameEn: Kai Ikemoto
+  email: ikemoto@hapis.k.u-tokyo.ac.jp
+  campus: Hongo
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 位相アンラッピングを用いた超音波フェーズドアレイのキャリブレーション手法
+- name: 日高 祐哉
+  nameEn: Yuya Hidaka
+  email: hidaka@hapis.k.u-tokyo.ac.jp
+  campus: Hongo
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 超音波触覚提示におけるテクスチャ触感データセットの作成
+- name: 藤井 陽太
+  nameEn: Yota Fujii
+  email: fujii@hapis.k.u-tokyo.ac.jp
+  campus: Hongo
+  degrees:
+    M:
+      start: 2024-04-01
+      grad: 2026-03-31
+      thesis: 超音波フェーズドアレーにおける音響流抑制
+- name: 林 佑恭
+  nameEn: Ukyo Hayashi
+  campus: Hongo
+  degrees:
+    B:
+      grad: 2026-03-31
+      thesis: 超音波素子を用いた音響浮揚に関する研究
+- name: 植木 智大
+  nameEn: Tomohiro Ueki
+  campus: Hongo
+  degrees:
+    B:
+      grad: 2026-03-31
+      thesis: スポーツ経験および利き手による瞬間的触覚刺激の感度への影響の研究
+- name: 石橋 悠生
+  nameEn: Yusei Ishibashi
+  campus: Hongo
+  degrees:
+    B:
+      grad: 2026-03-31
+      thesis: 局所的な空中超音波触覚提示により表現可能な触感の評価
 
 # 2024年度
 - name: 小丹枝 涼哉
