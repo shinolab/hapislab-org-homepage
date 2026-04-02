@@ -9815,8 +9815,6 @@
   eventDate: 3月
   pages: S61-S62
 
-# TODO: Check the following entries
-
 - type: domestic
   year: 2011
   authors:
@@ -9825,7 +9823,8 @@
     - 篠田 裕之
   title: 触覚共有のための表面硬さ分布の非接触計測と提示 ‐時間変調荷重を用いた計測の耐雑音性向上‐
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 610–613
 
 - type: domestic
@@ -9836,7 +9835,8 @@
     - 篠田 裕之
   title: 微小触覚素子の無配線結合
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 624–626
 
 - type: domestic
@@ -9847,7 +9847,8 @@
     - 篠田 裕之
   title: 多指仮想触力覚提示におけるオブジェクト形状の認知
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 1536–1539
 
 - type: domestic
@@ -9858,7 +9859,8 @@
     - 篠田 裕之
   title: 二次元導波路を用いる大容量電力伝送
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 1714–1715
 
 - type: domestic
@@ -9868,7 +9870,8 @@
     - 篠田 裕之
   title: 二次元導波路電力伝送用RF-DC変換カプラ
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 2052–2055
 
 - type: domestic
@@ -9878,7 +9881,8 @@
     - 篠田 裕之
   title: ２次元導波路を用いる光エネルギー伝送システム
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 2056–2058
 
 - type: domestic
@@ -9888,7 +9892,8 @@
     - 篠田 裕之
   title: 空中超音波による把持物体を介した位置情報提示
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 2244–2247
 
 - type: domestic
@@ -9898,7 +9903,8 @@
     - 篠田 裕之
   title: ユーザの身体表面位置指示に基づくウェアラブルインタフェース
   booktitle: 第12回SICE SI部門講演会論文集
-  location: 2011/12.
+  location: 京都
+  eventDate: 12月
   pages: 2263–2266
 
 - type: domestic
@@ -9946,8 +9952,9 @@
     - 中妻 啓
     - 篠田 裕之
   title: 多人数への同時触力覚情報伝送のための表面硬さ分布の遠隔計測と提示
-  booktitle: 「センサ・マイクロマシンと応用システム」シンポジウム論文集
-  location: 2011/9/26-27.
+  booktitle: 第28回「センサ・マイクロマシンと応用システム」シンポジウム論文集
+  location: 東京
+  eventDate: 9/26-27
   pages: 206–209
 
 - type: domestic
@@ -9957,6 +9964,7 @@
     - 篠田 裕之
   title: 布上の位置情報センシングによるウェアラブルインタフェース
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 11 講演論文集
+  pages: 1P1-C08(1-2)
 
 - type: domestic
   year: 2011
@@ -9968,6 +9976,7 @@
     - 篠田 裕之
   title: 多人数への物体の触力覚情報伝送のための硬さモデル生成 (第1 報) ―超音波振動子アレイを用いた表面硬さ分布計測システム―
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 11 講演論文集
+  pages: 2A2-O07(1-4)
 
 - type: domestic
   year: 2011
@@ -9978,6 +9987,7 @@
     - 篠田 裕之
   title: 多人数への物体の触力覚情報伝送のための硬さモデル生成 (第2 報) ―触力覚三次元モデルの生成と提示―
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 11 講演論文集
+  pages: 2A2-O08(1-4)
 
 - type: domestic
   year: 2011
@@ -9987,6 +9997,7 @@
     - 舘 暲
   title: 遠隔物体の形状と温度の知覚が可能な力触覚情報伝達システム
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 11 講演論文集
+  pages: 2P1-O03(1-4)
 
 - type: domestic
   year: 2011
@@ -9995,6 +10006,9 @@
     - 篠田 裕之
   title: 二次元導波シート上の複数デバイスへの選択的・高効率ワイヤレス給電を可能とする低放射損カプラ
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 11 講演論文集
+  pages: 2P1-Q14(1-4)
+
+  # TODO: Check the following entries
 
 - type: domestic
   year: 2010
