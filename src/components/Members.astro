@@ -20,6 +20,7 @@ const labels: Record<string, any> =
 				doctor: "Doctoral Students",
 				master: "Master's Students",
 				bachelor: "Undergraduate Students",
+				research: "Research Students",
 				alumni: "Alumni",
 				thesis: "Thesis",
 				email: "Email",
@@ -31,6 +32,7 @@ const labels: Record<string, any> =
 				doctor: "博士課程",
 				master: "修士課程",
 				bachelor: "学部生",
+				research: "研究生",
 				alumni: "卒業生・修了生",
 				thesis: "論文題目",
 				email: "メールアドレス",
@@ -93,7 +95,7 @@ const resolveMemberHref = (href?: string) =>
 		<h3 class="legacy-block__title">{labels.students}</h3>
 
 		{
-			(["D", "M", "B"] as DegreeKey[]).map((dk) => {
+			(["D", "M", "B", "R"] as DegreeKey[]).map((dk) => {
 				const students = activeStudents[dk];
 				if (students.length === 0) return null;
 				return (
@@ -105,7 +107,9 @@ const resolveMemberHref = (href?: string) =>
 										? "doctor"
 										: dk === "M"
 											? "master"
-											: "bachelor"
+											: dk === "B"
+												? "bachelor"
+												: "research"
 								]
 							}
 						</h4>
