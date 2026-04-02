@@ -9678,8 +9678,6 @@
   number: 459
   pages: 103–108
 
-  # TODO: Check the following entries
-
 - type: domestic
   year: 2012
   authors:
@@ -9687,7 +9685,8 @@
     - 篠田 裕之
   title: 時間変調移動荷重を用いた単一走査表面硬さ分布計測
   booktitle: 第13回SICE SI部門講演会論文集
-  location: 2012/12/18-20.
+  location: 福岡
+  eventDate: 12/18-20
   pages: 307–310
 
 - type: domestic
@@ -9698,7 +9697,8 @@
     - 昆陽 雅司
   title: 振動刺激の重畳を用いた鮮明な触刺激に関する研究
   booktitle: 第13回SICE SI部門講演会論文集
-  location: 2012/12/18-20.
+  eventDate: 12/18-20
+  location: 福岡
   pages: 333–334
 
 - type: domestic
@@ -9708,7 +9708,8 @@
     - 篠田 裕之
   title: 可変焦点型20GHzフェーズドアレイを用いた電力伝送
   booktitle: 第13回SICE SI部門講演会論文集
-  location: 2012/12/18-20.
+  eventDate: 12/18-20
+  location: 福岡
   pages: 614–615
 
 - type: domestic
@@ -9718,7 +9719,8 @@
     - 篠田 裕之
   title: 位相可変マルチポート給電による二次元導波路電力伝送
   booktitle: 第13回SICE SI部門講演会論文集
-  location: 2012/12/18-20.
+  eventDate: 12/18-20
+  location: 福岡
   pages: 619–622
 
 - type: domestic
@@ -9728,18 +9730,19 @@
     - 篠田 裕之
   title: 近接配置した複数アレイの協調動作による大開口空中超音波触覚ディスプレイの性能評価
   booktitle: 第13回SICE SI部門講演会論文集
-  location: 2012/12/18-20.
+  eventDate: 12/18-20
+  location: 福岡
   pages: 1328–1333
 
 - type: domestic
   year: 2012
   authors:
     - 藤原 正浩
-    - 篠田 裕之： 曲面形状をもつ実物体の遠隔表面硬さ分布計測
-    - 電気学会センサ・マイクロマシン部門大会 第29回
-  title: センサ・マイクロマシンと応用システム
+    - 篠田 裕之
+  title: 曲面形状をもつ実物体の遠隔表面硬さ分布計測
   booktitle: 電気学会センサ・マイクロマシン部門大会 第29回「センサ・マイクロマシンと応用システム」シンポジウム論文集
-  location: 2012/10/22-24.
+  location: 北九州
+  eventData: 10/22-24
   pages: 208–212
 
 - type: domestic
@@ -9773,9 +9776,9 @@
     - 藤原 正浩
     - 中妻 啓
     - 篠田 裕之
-  title: Visuo-Tactile Projector:映像と触覚の同時投影装置の提案
+  title: 'Visuo-Tactile Projector:映像と触覚の同時投影装置の提案'
   booktitle: 第17回日本バーチャルリアリティ学会大会論文集
-  location: 2012/9.
+  location: 9月
   pages: 359–362
 
 - type: domestic
@@ -9786,7 +9789,8 @@
     - 篠田 裕之
   title: 運筆動作を介した触覚コンテンツ生成および共有のための枠組み
   booktitle: ロボティクス・メカトロニクス講演会2012講演論文集
-  location: 2012/5.
+  location: 浜松
+  eventDate: 5月
   pages: 1P1-A02
 
 - type: domestic
@@ -9797,7 +9801,8 @@
     - 篠田 裕之
   title: 自身の身体表面への能動接触を利用する遠隔コミュニケーション
   booktitle: ロボティクス・メカトロニクス講演会2012講演論文集
-  location: 2012/5.
+  location: 浜松
+  eventDate: 5月
   pages: 1A1-E03
 
 - type: domestic
@@ -9807,8 +9812,11 @@
     - 篠田 裕之
   title: 二次元導波路電力伝送のための導波路リング共振器レクテナ
   booktitle: 2012年電子情報通信学会総合大会 通信講演論文集1
-  location: 2012/3.
+  location: 岡山
+  evenetDate: 3月
   pages: S61-S62
+
+# TODO: Check the following entries
 
 - type: domestic
   year: 2011
