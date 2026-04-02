@@ -20,13 +20,6 @@ export interface StudentDegree {
 	thesisEn?: string;
 }
 
-export interface StudentDegree {
-	start?: string;
-	grad: string;
-	thesis?: string;
-	thesisEn?: string;
-}
-
 export interface Student {
 	name: string;
 	nameEn: string;
@@ -37,6 +30,7 @@ export interface Student {
 		B?: StudentDegree;
 		M?: StudentDegree;
 		D?: StudentDegree;
+		R?: StudentDegree;
 	};
 }
 
@@ -52,7 +46,7 @@ export const getMembers = (): MemberData => {
 	return { staff, students };
 };
 
-export type DegreeKey = 'B' | 'M' | 'D';
+export type DegreeKey = 'B' | 'M' | 'D' | 'R';
 
 export interface AlumniEntry {
 	name: string;
@@ -82,6 +76,7 @@ const STUDENT_ROLE_LABELS: Record<DegreeKey, { ja: string, en: string, order: nu
 	D: { ja: '博士', en: 'Ph.D.', order: 1 },
 	M: { ja: '修士', en: 'Master', order: 2 },
 	B: { ja: '学部', en: 'Bachelor', order: 3 },
+	R: { ja: '研究生', en: 'Research Student', order: 4 },
 };
 
 function getMemberDetailSlugFromHref(href?: string): string | undefined {
@@ -100,7 +95,7 @@ function getMemberDetailSlugFromHref(href?: string): string | undefined {
 }
 
 function getStudentRole(student: Student): { ja: string; en: string } {
-	for (const degreeKey of ['D', 'M', 'B'] as DegreeKey[]) {
+	for (const degreeKey of ['D', 'M', 'B', 'R'] as DegreeKey[]) {
 		if (student.degrees[degreeKey]) {
 			return {
 				ja: STUDENT_ROLE_LABELS[degreeKey].ja,
@@ -163,6 +158,7 @@ export function processMembers(data: MemberData, now: Date = new Date()) {
 		D: [],
 		M: [],
 		B: [],
+		R: [],
 	};
 
 	const alumniByYear: Record<number, AlumniEntry[]> = {};
@@ -230,6 +226,8 @@ export function processMembers(data: MemberData, now: Date = new Date()) {
 				activeStudents.M.push(student);
 			} else if (student.degrees.B && (!student.degrees.B.grad || new Date(student.degrees.B.grad) > now)) {
 				activeStudents.B.push(student);
+			} else if (student.degrees.R && (!student.degrees.R.grad || new Date(student.degrees.R.grad) > now)) {
+				activeStudents.R.push(student);
 			}
 		}
 	});

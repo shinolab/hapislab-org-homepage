@@ -1,12 +1,4 @@
 # Current Students
-- name: 孙 清钰
-  nameEn: Sun Qingyu
-  email: sun@hapis.k.u-tokyo.ac.jp
-  campus: Hongo
-  degrees:
-    D:
-      start: 2022-04-01
-      grad: ""
 - name: 岸 尚希
   nameEn: Naoki Kishi
   email: kishi@hapis.k.u-tokyo.ac.jp
@@ -41,34 +33,6 @@
   degrees:
     M:
       start: 2024-04-01
-      grad: ""
-- name: Zilli Zhu
-  nameEn: Zilli Zhu
-  email: e.zhu@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    D:
-      start: 2022-04-01
-      grad: ""
-- name: 張 明昕
-  nameEn: Mingxin Zhang
-  email: m.zhang@hapis.k.u-tokyo.ac.jp
-  campus: Kashiwa
-  degrees:
-    D:
-      start: 2022-04-01
-      grad: ""
-- name: 曽明 然
-  nameEn: Zen Somei
-  email: somei@hapis.k.u-tokyo.ac.jp
-  href: https://zensomei.github.io/web/
-  campus: Kashiwa
-  degrees:
-    M:
-      grad: 2022-03-31
-      thesis: 触覚におけるメゾスコピック形状知覚機構の解明
-    D:
-      start: 2022-04-01
       grad: ""
 - name: 加藤 滉一
   nameEn: Koichi Kato
@@ -231,6 +195,14 @@
     M:
       start: 2026-04-01
       grad: ""
+- name: Barbara Nogar
+  nameEn: Barbara Nogar
+  email: nogar@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    R:
+      start: 2024-04-01
+      grad: ""
 
 # 2025年度
 - name: 荒川 岳斗
@@ -241,6 +213,51 @@
       grad: 2025-09-31
       thesis: 外部駆動物体とのインタラクションに向けた空中超音波による物体操作の研究
       thesisEn: Study on Acoustic Manipulation for Interaction with Externally Driven Objects
+- name: 孙 清钰
+  nameEn: Qingyu Sun
+  email: sun@hapis.k.u-tokyo.ac.jp
+  campus: Hongo
+  degrees:
+    D:
+      start: 2022-04-01
+      grad: 2025-09-30
+      thesis: 触覚における硬軟感知覚の解明と拡張
+      thesisEn: Understanding and Expanding the Perception of Hardness and Softness in Tactile Sensation
+- name: 曽明 然
+  nameEn: Zen Somei
+  email: somei@hapis.k.u-tokyo.ac.jp
+  href: https://zensomei.github.io/web/
+  campus: Kashiwa
+  degrees:
+    M:
+      grad: 2022-03-31
+      thesis: 触覚におけるメゾスコピック形状知覚機構の解明
+    D:
+      start: 2022-04-01
+      grad: 2026-03-31
+      thesis: '空中超音波触覚の表現力拡張：メゾスコピック粗さと粒子衝突型触覚の提示'
+      thesisEn: "Expanding Mid-Air Ultrasound Haptics: Display of Mesoscopic Roughness and Particle-Based Impact Sensations"
+- name: 張 明昕
+  nameEn: Mingxin Zhang
+  email: m.zhang@hapis.k.u-tokyo.ac.jp
+  campus: Kashiwa
+  degrees:
+    D:
+      start: 2022-04-01
+      grad: 2026-03-31
+      thesis: 触感テクスチャ設計のためのインタラクティブ最適化および視触覚データセット構築
+      thesisEn: Toward the Data-Driven Design of Texture-Based Haptic Feedback via Interactive Parameter Optimization and Vision-Haptic Dataset Construction
+- name: 朱 麒融
+  nameEn: Qirong Zhu
+  degrees:
+    M:
+      grad: 2023-03-31
+      thesis: Haptic Experience System for Guide-dog Training for Novice Trainers
+    D:
+      start: 2023-04-01
+      grad: 2026-03-31
+      thesis: 'アクセシビリティのための触覚フィードバックの拡張：力覚に基づく訓練支援と空中触覚による方向ガイダンス'
+      thesisEn: 'Expanding Haptic Feedback for Accessibility: Force-Based Training Support and Tactile Mid-Air Directional Guidance'
 - name: 菅原 広晶
   nameEn: Hiroaki Sugawara
   email: sugawara@hapis.k.u-tokyo.ac.jp
@@ -597,12 +614,6 @@
     M:
       grad: 2023-03-31
       thesis: Investigation of prediction accuracy of finger position in mid-air visual tactile display
-- name: Zhu Qirong
-  nameEn: Qirong Zhu
-  degrees:
-    M:
-      grad: 2023-03-31
-      thesis: Haptic Experience System for Guide-dog Training for Novice Trainers
 - name: 小野 悠太
   nameEn: Yuta Ono
   degrees:
