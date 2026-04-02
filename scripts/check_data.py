@@ -10,8 +10,45 @@ DEFAULT_PUBLICATIONS_PATH = REPO_ROOT / "src" / "data" / "publications.yml"
 DEFAULT_AWARDS_PATH = REPO_ROOT / "src" / "data" / "awards.yml"
 
 TARGETS = {
-    DEFAULT_AWARDS_PATH: ["recipients:", "authors:"],
-    DEFAULT_PUBLICATIONS_PATH: ["authors:", "recipients:"],
+    DEFAULT_AWARDS_PATH: ["recipients:"],
+    DEFAULT_PUBLICATIONS_PATH: ["authors:"],
+}
+
+ALLOWED_KEYS = {
+    DEFAULT_PUBLICATIONS_PATH: {
+        "address",
+        "articleno",
+        "authors",
+        "booktitle",
+        "doi",
+        "eventDate",
+        "href",
+        "issue",
+        "journal",
+        "lang",
+        "location",
+        "note",
+        "number",
+        "numpages",
+        "pages",
+        "publisher",
+        "refId",
+        "series",
+        "title",
+        "type",
+        "volume",
+        "year",
+    },
+    DEFAULT_AWARDS_PATH: {
+        "award",
+        "day",
+        "external",
+        "month",
+        "org",
+        "recipients",
+        "title",
+        "year",
+    },
 }
 
 
@@ -109,10 +146,30 @@ def check_names(file_path, list_keys):
     return errors
 
 
+def check_keys(file_path):
+    errors = []
+    if not os.path.exists(file_path):
+        return errors
+    allowed = ALLOWED_KEYS.get(file_path, set())
+    with open(file_path, "r", encoding="utf-8") as f:
+        for i, line in enumerate(f, 1):
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            # match keys like "- type: ..." or "  year: ..."
+            match = re.match(r"^(- |  )([a-zA-Z]+):", line)
+            if match:
+                key = match.group(2)
+                if key not in allowed:
+                    errors.append(f"{file_path}:{i}: Unknown key found: \"{key}\"")
+    return errors
+
+
 def main():
     all_errors = []
     for file_path, keys in TARGETS.items():
         all_errors.extend(check_names(file_path, keys))
+        all_errors.extend(check_keys(file_path))
     all_errors.extend(check_pages(DEFAULT_PUBLICATIONS_PATH))
     all_errors.extend(check_duplicates(DEFAULT_PUBLICATIONS_PATH))
     if all_errors:

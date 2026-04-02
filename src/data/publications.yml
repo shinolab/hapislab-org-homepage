@@ -888,7 +888,7 @@
     - Hiroyuki SHINODA
   title: Remote Measurement of Surface Compliance Distribution Using Convergent Ultrasound
   refId: fujiwara-2013-remote
-  jornal: 計測自動制御学会論文集
+  journal: 計測自動制御学会論文集
   doi: 10.9746/sicetr.49.455
   href: https://doi.org/10.9746/sicetr.49.455
   journal: Transactions of the Society of Instrument and Control Engineers
@@ -1645,7 +1645,7 @@
   booktitle: International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (Eurohaptics)
   pages: 365–377
   location: Lille, France
-  eventData: June 30-July 3
+  eventDate: June 30-July 3
 
 - type: inproceedings
   year: 2024
@@ -1658,7 +1658,7 @@
   booktitle: 14th International Conference on Human Haptic Sensing and Touch Enabled Computer Applications (EuroHaptics)
   pages: 90–102
   location: Lille, France
-  eventData: June 30-July 3
+  eventDate: June 30-July 3
 
 - type: inproceedings
   year: 2024
@@ -1796,7 +1796,7 @@
   booktitle: AsiaHaptics Tokyo Satellite
   pages: 1–2
   location: Tokyo, Japan
-  eventData: Nov. 12
+  eventDate: Nov. 12
 
 - type: inproceedings
   year: 2022
@@ -1809,7 +1809,7 @@
   booktitle: AsiaHaptics Tokyo Satellite
   pages: 1–2
   location: Tokyo, Japan
-  eventData: Nov. 12
+  eventDate: Nov. 12
 
 - type: inproceedings
   year: 2022
@@ -1823,7 +1823,7 @@
   booktitle: AsiaHaptics Tokyo Satellite
   pages: 1–2
   location: Tokyo, Japan
-  eventData: Nov. 12
+  eventDate: Nov. 12
 
 - type: inproceedings
   year: 2022
@@ -5990,7 +5990,7 @@
   title: 強力空中超音波による温覚知覚の評価
   booktitle: 第25回計測自動制御学会システムインテグレーション部門講演会
   pages: 1A7-07
-  eventDatate: Dec.18-20
+  eventDate: Dec.18-20
   location: 岩手
 
 - type: domestic
@@ -9674,7 +9674,7 @@
   booktitle: 電子情報通信学会技術研究報告 MW マイクロ波
   location: 広島
   eventDate: 3月
-  voulme: 112,
+  volume: 112,
   number: 459
   pages: 103–108
 
@@ -9742,7 +9742,7 @@
   title: 曲面形状をもつ実物体の遠隔表面硬さ分布計測
   booktitle: 電気学会センサ・マイクロマシン部門大会 第29回「センサ・マイクロマシンと応用システム」シンポジウム論文集
   location: 北九州
-  eventData: 10/22-24
+  eventDate: 10/22-24
   pages: 208–212
 
 - type: domestic
@@ -9813,7 +9813,7 @@
   title: 二次元導波路電力伝送のための導波路リング共振器レクテナ
   booktitle: 2012年電子情報通信学会総合大会 通信講演論文集1
   location: 岡山
-  evenetDate: 3月
+  eventDate: 3月
   pages: S61-S62
 
 # TODO: Check the following entries
