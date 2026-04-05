@@ -10172,7 +10172,7 @@
   title: 分散型アレイによる大開口超音波触覚ディスプレイの実現（Airborne Ultrasound Tactile Display with Large Synthesized Aperture Using Distributed Array Units）
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2010 講演論文集
   location: 旭川
-  evenetDate: 6/13-16
+  eventDate: 6/13-16
   pages: 1A1-D06(1-2)
 
 - type: domestic
@@ -10183,7 +10183,7 @@
   title: 静電容量分布計測に基づく 二次元通信シート状のデバイス位置計測 第2報（Position Estimation based on Capacitance Pattern Sensing on Two-Dimensional Communication Sheet -Second Report-）
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2010 講演論文集
   location: 旭川
-  evenetDate: 6/13-16
+  eventDate: 6/13-16
   pages: 1A1-D22(1-3)
 
 - type: domestic
@@ -10194,7 +10194,7 @@
   title: 一点支持回転体並進移動ロボット
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2010 講演論文集
   location: 旭川
-  evenetDate: 6/13-16
+  eventDate: 6/13-16
   pages: 2A1-F11 (1-2)
 
 - type: domestic
@@ -10207,7 +10207,7 @@
   booktitle: インタラクション2010 論文集
   location: 東京
   eventDate: Mar.
-  pages: 225-226
+  pages: 225–226
 
 # TODO: Check the following entries
 
