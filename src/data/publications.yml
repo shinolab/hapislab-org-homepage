@@ -10551,15 +10551,13 @@
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2008 講演論文集
   pages: 2P1-H15(1-4)
 
-# TODO: check the following entries
-
 - type: domestic
   year: 2007
   authors:
     - 牧野 泰才
     - 篠田 裕之
   title: 筋電分布計測によるハプティックインタフェース －第2報－
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 13–14
 
 - type: domestic
@@ -10568,7 +10566,7 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 空中超音波による触覚提示
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 29–30
 
 - type: domestic
@@ -10577,7 +10575,7 @@
     - 清田 翔平
     - 篠田 裕之
   title: 対称構造を利用した表面応力センサ
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 495–496
 
 - type: domestic
@@ -10586,7 +10584,7 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 静脈像を利用した皮膚変形推定
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 503–504
 
 - type: domestic
@@ -10595,7 +10593,7 @@
     - 星 貴之
     - 篠田 裕之
   title: リアルタイムに形状計測可能な布状デバイス
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 977–978
 
 - type: domestic
@@ -10605,7 +10603,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: 二次元通信における位置計測法
-  booktitle: 第８回SICE SI部門講演会 (PDF)
+  booktitle: 第８回SICE SI部門講演会
   pages: 1288–1289
 
 - type: domestic
@@ -10624,7 +10622,7 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Position Detection on Two-Dimensional Signal Transmission Sheet by Magnetic Field Pattern Sensing
-  booktitle: IEEJ 24th Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 24th Sensor Symposium
   pages: 68–72
 
 - type: domestic
@@ -10633,7 +10631,7 @@
     - Shohei Kiyota
     - Hiroyuki Shinoda
   title: Cubic Stress Tensor Sensor Using Symmetry Structure
-  booktitle: IEEJ 24th Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 24th Sensor Symposium
   pages: 55–58
 
 - type: domestic
@@ -10642,7 +10640,7 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Myoelectric Pattern Measurement on a Forearm Based on Two-Dimensional Signal Transmission Technology
-  booktitle: IEEJ 24th Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 24th Sensor Symposium
   pages: 59–63
 
 - type: domestic
@@ -10651,7 +10649,7 @@
     - Takayuki Hoshi
     - Hiroyuki Shinoda
   title: 3D Shape Capture Sheet Based on Gravity and Geomagnetic Sensing
-  booktitle: IEEJ 24th Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 24th Sensor Symposium
   pages: 423–427
 
 - type: domestic
@@ -10716,7 +10714,8 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 指の多自由度振動計測による触覚インターフェイス
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集
+  pages: 1A2-A08(1-2)
 
 - type: domestic
   year: 2007
@@ -10725,7 +10724,8 @@
     - 尾崎 沙世
     - 篠田 裕之
   title: 三次元形状計測シート
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集
+  pages: 1A2-A09(1-4)
 
 - type: domestic
   year: 2007
@@ -10734,7 +10734,8 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 触覚神経信号の同期計測法
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集
+  pages: 1P1-A11(1-4)
 
 - type: domestic
   year: 2007
@@ -10742,7 +10743,8 @@
     - 清田 翔平
     - 篠田 裕之
   title: 対称構造を利用した応力テンソルセンサ素子
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2007 講演論文集
+  pages: 1P1-A12(1-3)
 
 - type: domestic
   year: 2007
@@ -10816,7 +10818,7 @@
     - Yasutoshi Makino
     - Hiroyuki Shinoda
   title: Large Area Tactile Sensor based on Proximity Connection of Tactile Sensing Elements
-  booktitle: IEEJ 23rd Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 23rd Sensor Symposium
   pages: 437–442
 
 - type: domestic
@@ -10826,7 +10828,7 @@
     - Naoshi Yamahira
     - Hiroyuki Shinoda
   title: Proximity Connector for Two-Dimensional Electromagnetic Wave Communication
-  booktitle: IEEJ 23rd Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 23rd Sensor Symposium
   pages: 397–402
 
 - type: domestic
@@ -10835,7 +10837,7 @@
     - Takayuki Hoshi
     - Hiroyuki Shinoda
   title: Linking Nonlinear Tactile Elements by Cell-Bridge System
-  booktitle: IEEJ 23rd Sensor Symposium (PDF)
+  booktitle: Proc. IEEJ 23rd Sensor Symposium
   pages: 274–278
 
 - type: domestic
@@ -10844,7 +10846,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: 二次元筋電分布を計測するリストバンド型マン・マシンインタフェース
-  booktitle: 第23回センシングフォーラム資料 (PDF)
+  booktitle: 第23回センシングフォーラム資料
   eventDate: Oct
   pages: 293–298
 
@@ -10856,6 +10858,7 @@
     - 篠田 裕之
   title: 指中節部における触覚神経信号の計測
   booktitle: 第23 回センシングフォーラム資料
+  eventDate: Oct
   pages: 289–292
 
 - type: domestic
@@ -10865,7 +10868,8 @@
     - 星 貴之
     - 篠田 裕之
   title: 生体指の振動計測に基づく触覚センシング
-  booktitle: 第23 回センシングフォーラム資料 (PDF)
+  booktitle: 第23 回センシングフォーラム資料
+  eventDate: Oct
   pages: 285–288
 
 - type: domestic
@@ -10875,7 +10879,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: 近接結合型触覚素子
-  booktitle: 第23回センシングフォーラム資料 (PDF)
+  booktitle: 第23回センシングフォーラム資料
   pages: 279–284
 
 - type: domestic
@@ -10895,7 +10899,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: 二次元信号伝送のための共鳴近接コネクタ
-  booktitle: 電気学会センサ・マイクロマシン準部門総合研究会 (PDF)
+  booktitle: 電気学会センサ・マイクロマシン準部門総合研究会
   pages: 65–70
 
 - type: domestic
@@ -10904,7 +10908,7 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 2次元走査型超音波触覚ディスプレイによる触感の提示
-  booktitle: 日本バーチャルリアリティ学会第１１回大会論文集(PDF)
+  booktitle: 日本バーチャルリアリティ学会第１１回大会論文集
   pages: 179–180
 
 - type: domestic
@@ -10914,7 +10918,8 @@
     - 輿 かがり
     - 篠田 裕之
   title: セルブリッジネットワークによる人工皮膚
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集
+  pages: 2P2-B07(1-4)
 
 - type: domestic
   year: 2006
@@ -10922,7 +10927,8 @@
     - 岩本 貴之
     - 篠田 裕之
   title: マルチアレイ方式による二次元走査型超音波触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集
+  pages: 2P2-B25(1-2)
 
 - type: domestic
   year: 2006
@@ -10931,7 +10937,8 @@
     - 牧野 泰才
     - 篠田 裕之
   title: セルブリッジ音響システム
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集
+  pages: 2P2-A37(1-4)
 
 - type: domestic
   year: 2006
@@ -10939,7 +10946,10 @@
     - 中山 央己
     - 篠田 裕之
   title: 静電型柔軟触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会 2006 講演論文集
+  pages: 2P2-B23(1-2)
+
+# TODO: check the following entries
 
 - type: domestic
   year: 2005
@@ -10949,7 +10959,7 @@
     - 篠田 裕之
   title: 筋電分布を計測するリストバンド型インタフェース
   booktitle: 第２２回センシングフォーラム講演論文集
-  pages: 81–84, 2005．(PDF)
+  pages: 81–84, 2005．
 
 - type: domestic
   year: 2005
@@ -10957,7 +10967,7 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 超音波触覚ディスプレイによる触覚特性の解明
-  booktitle: 第２２回センシングフォーラム講演論文集(PDF)
+  booktitle: 第２２回センシングフォーラム講演論文集
   pages: 321–325
 
 - type: domestic
@@ -10975,7 +10985,7 @@
     - Takayuki Hoshi
     - Hiroyuki Shinoda
   title: A Tactile Element Based on Nonlinear Elasticity to Sense Contact Area
-  booktitle: IEEJ 22nd Sensor Symposium (PDF)
+  booktitle: IEEJ 22nd Sensor Symposium
   pages: 375–379
 
 - type: domestic
@@ -10985,7 +10995,7 @@
     - Kouta Minamizawa
     - Hiroyuki Shinoda
   title: Sensor Networking Using Two-Dimensional Electromagnetic Wave
-  booktitle: IEEJ 22nd Sensor Symposium (PDF)
+  booktitle: IEEJ 22nd Sensor Symposium
   pages: 83–88
 
 - type: domestic
@@ -11005,7 +11015,7 @@
     - 篠田 裕之
   title: 非線形弾性を利用する触覚センシング
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’05 講演論文集
-  location: 2P1-N-104(1-4), 2005．(PDF)
+  location: 2P1-N-104(1-4), 2005．
 
 - type: domestic
   year: 2005
@@ -11013,7 +11023,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: 受容器の時間的応答特性を利用する吸引圧触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’05 講演論文集(PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’05 講演論文集
 
 - type: domestic
   year: 2005
@@ -11022,7 +11032,7 @@
     - 池田 佳路
     - 篠田 裕之
   title: 2次元走査型超音波触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’05 講演論文集(PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’05 講演論文集
 
 - type: domestic
   year: 2004
@@ -11030,7 +11040,7 @@
     - 星 貴之
     - 篠田 裕之
   title: 材料の非線形特性を利用する触覚センシング
-  booktitle: 第22回日本ロボット学会学術講演会論文集(PDF)
+  booktitle: 第22回日本ロボット学会学術講演会論文集
 
 - type: domestic
   year: 2004
@@ -11038,7 +11048,7 @@
     - 岩本 貴之
     - 篠田 裕之
   title: 放射圧走査型触覚ディスプレイ
-  booktitle: 日本バーチャルリアリティ学会第９回大会論文集(PDF)
+  booktitle: 日本バーチャルリアリティ学会第９回大会論文集
   pages: 29–30
 
 - type: domestic
@@ -11048,7 +11058,7 @@
     - 澤田 清彦
     - 篠田 裕之
   title: 歪みエネルギーの選択的制御に基づく触感提示法
-  booktitle: 日本バーチャルリアリティ学会第９回大会論文集(PDF)
+  booktitle: 日本バーチャルリアリティ学会第９回大会論文集
   pages: 37–40
 
 - type: domestic
@@ -11057,7 +11067,7 @@
     - 牧野 泰才
     - 篠田 裕之
   title: マルチプリミティブ吸引刺激による手掌部触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’04 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’04 講演論文集
 
 - type: domestic
   year: 2004
@@ -11066,7 +11076,7 @@
     - 赤穂 大輔
     - 篠田 裕之
   title: 超音波アレイによる放射圧触覚ディスプレイ
-  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’04 講演論文集 (PDF)
+  booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’04 講演論文集
 
 - type: domestic
   year: 2003
@@ -11075,7 +11085,7 @@
     - 浅村 直也
     - 篠田 裕之
   title: 吸引圧による触覚ディスプレイ
-  booktitle: 第４回 ＳＩＣＥ システムインテグレーション部門（ＳＩ部門） 講演会論文集 (PDF)
+  booktitle: 第４回 ＳＩＣＥ システムインテグレーション部門（ＳＩ部門） 講演会論文集
   pages: 418–419
 
 - type: domestic
@@ -11086,7 +11096,7 @@
     - 篠田 裕之
   title: 吸引圧を用いるマルチプリミティブ触覚ディスプレイ
   booktitle: 日本バーチャルリアリティ学会第８回大会論文集
-  pages: 243–246, 2003. (PDF)
+  pages: 243–246, 2003.
 
 - type: domestic
   year: 2003
@@ -11095,7 +11105,7 @@
     - Naoya Asamura
     - Hiroyuki Shinoda
   title: A Cutaneous Feeling Display Using Suction Pressure
-  booktitle: SICE (PDF)
+  booktitle: SICE
   pages: 2096–2099
 
 - type: domestic
@@ -11106,7 +11116,7 @@
     - 篠田 裕之
   title: 吸引圧制御による手掌部触覚ディスプレイ
   booktitle: 日本機械学会ロボティクス・メカトロニクス講演会’03 講演論文集
-  location: 1A1-2F-E7 (1-2), 2003. (PDF)
+  location: 1A1-2F-E7 (1-2), 2003.
 
 - type: domestic
   year: 2002
