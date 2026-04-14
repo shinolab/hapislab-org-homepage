@@ -1,5 +1,10 @@
 [
   {
+    "title": "空中ハプティクス・空中触覚提示　～開発の経緯と現状",
+    "href": "/airborne-ultrasound-tactile-display/",
+    "image": "/projects/autd/AUTD_3x3_960x600.jpg"
+  },
+  {
     "title": "ハプティクスイニシアチブが始まりました",
     "image": "/assets/projects/haptics-initiative/initiative_mini.png",
     "href": "https://sites.google.com/edu.k.u-tokyo.ac.jp/haptics-initiative"
@@ -8,11 +13,6 @@
     "title": "内閣府 SIP プロジェクト「非接触ハプティクスの公共空間実装」(2023-)",
     "image": "/assets/projects/SIP_noncontact_haptics/SIP_logo.png",
     "href": "https://sip3.nedo.go.jp/virtual/"
-  },
-  {
-    "title": "空中ハプティクス・空中触覚提示　～開発の経緯と現状",
-    "href": "/airborne-ultrasound-tactile-display/",
-    "image": "/projects/autd/AUTD_3x3_960x600.jpg"
   },
     {
     "title": "JST CREST 実体化映像プロジェクト (2018-2024)",

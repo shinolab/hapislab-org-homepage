@@ -1,21 +1,21 @@
 [
   {
-    "title": "Haptics Initiative",
-    "href": "https://sites.google.com/edu.k.u-tokyo.ac.jp/haptics-initiative",
-    "description": "Manage independent project and collaboration links here instead of mixing them with research topics."
-  },
-  {
-    "title": "Expo 2025 Osaka Kansai Collaboration",
-    "href": "https://www.niterragroup.com/english/expo2025/",
-    "description": "Use this area for external exhibits, collaborations, and other project-specific landing pages."
-  },
-  {
-    "title": "Midair Haptics, Ultrasound Tactile Display",
+    "title": "Midair Haptics: Evolution and Current State",
     "href": "/en/airborne-ultrasound-tactile-display/",
     "image": "/projects/autd/AUTD_3x3_960x600.jpg"
   },
+    {
+    "title": "The Haptics Initiative has launched",
+    "image": "/assets/projects/haptics-initiative/initiative_mini.png",
+    "href": "https://sites.google.com/edu.k.u-tokyo.ac.jp/haptics-initiative"
+  },
+    {
+    "title": "SIP Project: Implementation of Noncontact Haptics in Public Spaces (2023-)",
+    "image": "/assets/projects/SIP_noncontact_haptics/SIP_logo.png",
+    "href": "https://sip3.nedo.go.jp/virtual/en/index.html"
+  },
   {
-    "title": "JST CREST Materialized Graphics Project",
+    "title": "JST CREST Materialized Graphics Project (Completed)",
     "href": "https://materialized-graphics.hapislab.org/en",
     "image": "/assets/projects/materialized_graphics/CREST_960_600.jpg"
   }

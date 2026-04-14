@@ -167,8 +167,7 @@ const descriptionParagraphs = copy.description
 											alt={item.imageAlt ?? item.title}
 											class="home-topic-carousel__image"
 											draggable="false"
-											width={200}
-											height={150}
+											width={800}
 											loading={
 												index < 3 ? "eager" : "lazy"
 											}
@@ -197,8 +196,7 @@ const descriptionParagraphs = copy.description
 											alt={item.imageAlt ?? item.title}
 											class="home-topic-carousel__image"
 											draggable="false"
-											width={200}
-											height={150}
+											width={800}
 											loading="lazy"
 										/>
 										<h3 class="home-topic-carousel__title">
@@ -231,7 +229,7 @@ const descriptionParagraphs = copy.description
 			<div class="home-section__content">
 				<div class="home-intro">
 					<div class="home-intro__branding">
-						<div class="home-overview__body">
+						<div class="home-overview__description">
 							{copy.heroSubtitle && <h4>{copy.heroSubtitle}</h4>}
 							<h3>{copy.heroTitle}</h3>
 						</div>
@@ -287,8 +285,7 @@ const descriptionParagraphs = copy.description
 													project.title
 												}
 												class="home-project-card__image"
-												width={400}
-												height={225}
+												width={800}
 											/>
 										) : (
 											<div
@@ -374,8 +371,7 @@ const descriptionParagraphs = copy.description
 													topic.title
 												}
 												class="news-card__image"
-												width={400}
-												height={300}
+												width={800}
 											/>
 										)}
 									</div>
@@ -557,13 +553,13 @@ const descriptionParagraphs = copy.description
 		align-items: center;
 	}
 
-	.home-overview__body h3 {
+	.home-overview__description h3 {
 		margin: 0;
 		font-size: clamp(1.8rem, 3vw, 2.8rem);
 		line-height: 1.2;
 	}
 
-	.home-overview__body h4 {
+	.home-overview__description h4 {
 		margin: 0;
 		font-size: clamp(1.2rem, 2vw, 1.86rem);
 		line-height: 1.2;
@@ -572,7 +568,7 @@ const descriptionParagraphs = copy.description
 	.home-overview__description {
 		display: grid;
 		gap: 0.5rem;
-		text-align: justify;
+		text-align: left;
 		text-justify: inter-ideograph;
 	}
 
@@ -664,7 +660,7 @@ const descriptionParagraphs = copy.description
 
 	.home-project-card__image {
 		width: 100%;
-		height: 120px;
+		height: 200px;
 		object-fit: cover;
 		display: block;
 		border-bottom: 1px solid var(--border);
@@ -707,7 +703,7 @@ const descriptionParagraphs = copy.description
 
 	.news-card__visual {
 		width: 100%;
-		aspect-ratio: 4 / 3;
+		aspect-ratio: 6 / 3;
 		margin-bottom: 0.8rem;
 		border: 1px solid var(--border);
 		background:
